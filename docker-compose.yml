@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  # Base de données PostgreSQL
+  postgres:
+    image: postgres:15
+    container_name: agent_postgres
+    environment:
+      POSTGRES_DB: agent_company_db
+      POSTGRES_USER: agent_user
+      POSTGRES_PASSWORD: agent_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agent_user -d agent_company_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Cache Redis
+  redis:
+    image: redis:7-alpine
+    container_name: agent_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Application principale
+  app:
+    build: .
+    container_name: agent_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://agent_user:agent_password@postgres:5432/agent_company_db
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+    ports:
+      - "8000:8000"
+    command: uvicorn orchestrator.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Worker Celery pour tâches lourdes
+  celery_worker:
+    build: .
+    container_name: agent_celery_worker
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://agent_user:agent_password@postgres:5432/agent_company_db
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+    command: celery -A orchestrator.queue_manager worker --loglevel=info --concurrency=4
+
+  # Monitoring Celery
+  flower:
+    build: .
+    container_name: agent_flower
+    depends_on:
+      - redis
+      - celery_worker
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    ports:
+      - "5555:5555"
+    command: celery -A orchestrator.queue_manager flower --host=0.0.0.0 --port=5555
+
+volumes:
+  postgres_data:
+  redis_data: 

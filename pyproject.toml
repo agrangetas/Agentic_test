@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "agent-company-intelligence"
+version = "0.1.0"
+description = "Agent d'investigation d'entreprises avec orchestrateur maison"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "orchestrator"}, {include = "agents"}, {include = "tools"}, {include = "memory"}, {include = "validation"}, {include = "monitoring"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+asyncio = "^3.4.3"
+aioredis = "^2.0.1"
+asyncpg = "^0.29.0"
+celery = "^5.3.4"
+fastapi = "^0.104.1"
+httpx = "^0.25.2"
+loguru = "^0.7.2"
+networkx = "^3.2.1"
+openai = "^1.3.0"
+pandas = "^2.1.3"
+pydantic = "^2.5.0"
+python-dotenv = "^1.0.0"
+redis = "^5.0.1"
+sqlalchemy = "^2.0.23"
+alembic = "^1.13.0"
+psutil = "^5.9.6"
+prometheus-client = "^0.19.0"
+kombu = "^5.3.4"
+uvicorn = "^0.24.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+pytest-mock = "^3.12.0"
+black = "^23.11.0"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+mypy = "^1.7.1"
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true 
