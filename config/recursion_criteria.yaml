@@ -1,0 +1,69 @@
+recursion_criteria:
+  max_depth: 3
+  min_participation_percent: 10.0  # % de participation minimum pour explorer
+  min_ca_threshold: 1000000        # CA minimum en euros
+  max_entities_per_level: 5        # Max entités par niveau de profondeur
+  similarity_threshold: 0.8        # Seuil pour éviter les doublons
+  time_limit_minutes: 30           # Limite de temps par session
+
+# Secteurs prioritaires pour l'exploration
+relevant_sectors:
+  - technology
+  - finance
+  - healthcare
+  - energy
+  - automotive
+  - aerospace
+  - telecommunications
+  - retail
+  - real_estate
+  - consulting
+
+# Critères de filtrage par type de lien
+link_criteria:
+  shareholding:
+    min_percentage: 5.0      # Minimum 5% de participation
+    priority_percentage: 25.0 # Priorité haute si > 25%
+  
+  subsidiary:
+    min_percentage: 50.0     # Minimum 50% pour être considéré comme filiale
+    
+  partnership:
+    min_ca_impact: 500000    # Impact CA minimum pour les partenariats
+    
+  acquisition:
+    min_amount: 1000000      # Montant minimum pour les acquisitions
+
+# Configuration par profondeur
+depth_config:
+  level_0:  # Entreprise initiale
+    max_entities: 1
+    explore_all_links: true
+    
+  level_1:  # Premier niveau de récursion
+    max_entities: 10
+    min_participation: 10.0
+    explore_subsidiaries: true
+    explore_shareholders: true
+    explore_partnerships: false
+    
+  level_2:  # Second niveau
+    max_entities: 5
+    min_participation: 25.0
+    explore_subsidiaries: true
+    explore_shareholders: false
+    explore_partnerships: false
+    
+  level_3:  # Troisième niveau (maximum)
+    max_entities: 3
+    min_participation: 50.0
+    explore_subsidiaries: true
+    explore_shareholders: false
+    explore_partnerships: false
+
+# Règles d'arrêt anticipé
+early_stopping:
+  max_total_entities: 50        # Arrêt si plus de 50 entités découvertes
+  max_processing_time: 1800     # Arrêt après 30 minutes
+  max_api_calls: 1000          # Limite d'appels API par session
+  max_memory_usage_mb: 500     # Limite mémoire en MB 

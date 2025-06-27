@@ -1,0 +1,118 @@
+cache_policy:
+  # Données d'entreprises
+  enterprise_data:
+    ttl: "7d"
+    invalidate_on: 
+      - "inpi_update"
+      - "manual_refresh"
+    compress: true
+    max_size_mb: 10
+    
+  # Données d'actualités
+  news_data:
+    ttl: "1d"
+    invalidate_on: 
+      - "time"
+    compress: true
+    max_size_mb: 5
+    
+  # Données web
+  web_data:
+    ttl: "3d"
+    invalidate_on: 
+      - "url_change"
+      - "site_update"
+    compress: true
+    max_size_mb: 15
+    
+  # Données INPI
+  inpi_data:
+    ttl: "30d"
+    invalidate_on: 
+      - "manual_refresh"
+      - "inpi_registry_update"
+    compress: true
+    max_size_mb: 20
+    
+  # Données de validation
+  validation_results:
+    ttl: "6h"
+    invalidate_on: 
+      - "source_data_change"
+    compress: false
+    max_size_mb: 2
+    
+  # Résultats d'agents
+  agent_results:
+    ttl: "12h"
+    invalidate_on: 
+      - "agent_config_change"
+      - "input_data_change"
+    compress: true
+    max_size_mb: 8
+    
+  # Données de normalisation
+  normalization_data:
+    ttl: "14d"
+    invalidate_on: 
+      - "manual_refresh"
+    compress: false
+    max_size_mb: 3
+
+# Configuration Redis
+redis_config:
+  default_db: 0
+  cache_db: 1
+  session_db: 2
+  celery_db: 3
+  
+  # Politique d'éviction
+  maxmemory_policy: "allkeys-lru"
+  maxmemory: "256mb"
+  
+  # Compression
+  compression_threshold: 1024  # Compresser si > 1KB
+  compression_algorithm: "gzip"
+  
+  # Monitoring
+  enable_stats: true
+  stats_retention: "24h"
+
+# Stratégies de cache
+strategies:
+  # Stratégie par défaut
+  default:
+    strategy: "cache_aside"
+    ttl: "1h"
+    max_retries: 3
+    
+  # Pour les données critiques
+  critical:
+    strategy: "write_through"
+    ttl: "24h"
+    max_retries: 5
+    backup_enabled: true
+    
+  # Pour les données temporaires
+  temporary:
+    strategy: "cache_aside"
+    ttl: "5m"
+    max_retries: 1
+    
+  # Pour les sessions
+  session:
+    strategy: "write_back"
+    ttl: "30m"
+    max_retries: 3
+    extend_on_access: true
+
+# Préfixes des clés
+key_prefixes:
+  enterprise: "ent:"
+  agent_result: "agent:"
+  session: "sess:"
+  validation: "valid:"
+  normalization: "norm:"
+  web_data: "web:"
+  inpi_data: "inpi:"
+  news_data: "news:" 
