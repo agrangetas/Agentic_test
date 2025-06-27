@@ -32,27 +32,88 @@ class AgentNormalization(FullFeaturedAgent):
         errors = []
         warnings = []
         
+        self.logger.debug("Starting normalization execution", extra={
+            "session_id": context.session_id,
+            "enterprise_name": context.enterprise_name,
+            "function": "execute"
+        })
+        
         try:
             await self.pre_execute(context)
             
             # Vérification du cache
+            self.logger.debug("Checking cache for normalization result", extra={
+                "session_id": context.session_id,
+                "function": "get_cached_result"
+            })
+            
             cached_result = await self.get_cached_result(context)
             if cached_result:
-                self.logger.info("Using cached normalization result")
+                self.logger.info("Using cached normalization result", extra={
+                    "session_id": context.session_id,
+                    "cache_hit": True,
+                    "event_type": "cache_hit"
+                })
                 return cached_result
             
             # Validation des entrées
+            self.logger.debug("Validating input data", extra={
+                "session_id": context.session_id,
+                "enterprise_name_length": len(context.enterprise_name),
+                "function": "validate_input"
+            })
+            
             if not self.validate_input(context):
                 raise ValueError("Invalid input data")
             
             # 1. Normalisation du nom (FAKE DATA pour tests)
+            self.logger.debug("Starting name normalization (fake mode)", extra={
+                "session_id": context.session_id,
+                "original_name": context.enterprise_name,
+                "function": "_normalize_name_fake"
+            })
+            
             normalized_result = await self._normalize_name_fake(context.enterprise_name)
             
+            self.logger.debug("Name normalization completed", extra={
+                "session_id": context.session_id,
+                "normalized_name": normalized_result['normalized'],
+                "variants_count": len(normalized_result['variants']),
+                "confidence": normalized_result['confidence'],
+                "function": "_normalize_name_fake"
+            })
+            
             # 2. Matching avec base de données (FAKE DATA pour tests)
+            self.logger.debug("Starting enterprise matching (fake mode)", extra={
+                "session_id": context.session_id,
+                "variants_to_match": len(normalized_result['variants']),
+                "function": "_match_enterprise_fake"
+            })
+            
             match_result = await self._match_enterprise_fake(normalized_result['variants'])
             
+            self.logger.debug("Enterprise matching completed", extra={
+                "session_id": context.session_id,
+                "matches_found": len(match_result['matches']),
+                "best_match_confidence": match_result.get('confidence', 0.0),
+                "best_match_siren": match_result.get('best_match', {}).get('siren'),
+                "function": "_match_enterprise_fake"
+            })
+            
             # 3. Extraction d'entités nommées (FAKE DATA pour tests)
+            self.logger.debug("Starting named entity extraction (fake mode)", extra={
+                "session_id": context.session_id,
+                "text_length": len(context.enterprise_name),
+                "function": "_extract_entities_fake"
+            })
+            
             ner_result = await self._extract_entities_fake(context.enterprise_name)
+            
+            self.logger.debug("Named entity extraction completed", extra={
+                "session_id": context.session_id,
+                "entities_found": len(ner_result['entities']),
+                "function": "_extract_entities_fake"
+            })
             
             # Consolidation des résultats
             consolidated_data = {
@@ -68,11 +129,33 @@ class AgentNormalization(FullFeaturedAgent):
             }
             
             # Validation des données
+            self.logger.debug("Validating consolidated data", extra={
+                "session_id": context.session_id,
+                "data_keys": list(consolidated_data.keys()),
+                "function": "validate_data_consistency"
+            })
+            
             validation_errors = self.validate_data_consistency(consolidated_data)
             if validation_errors:
                 errors.extend(validation_errors)
+                self.logger.warning("Data validation errors found", extra={
+                    "session_id": context.session_id,
+                    "validation_errors": validation_errors,
+                    "event_type": "validation_errors"
+                })
             
             execution_time = time.time() - start_time
+            
+            self.logger.info("Normalization execution successful", extra={
+                "session_id": context.session_id,
+                "execution_time": execution_time,
+                "confidence_score": consolidated_data['confidence_score'],
+                "variants_found": len(normalized_result['variants']),
+                "matches_found": len(match_result['matches']),
+                "entities_found": len(ner_result['entities']),
+                "siren_found": bool(consolidated_data['siren']),
+                "event_type": "normalization_success"
+            })
             
             result = AgentResult(
                 agent_name=self.name,
@@ -91,6 +174,11 @@ class AgentNormalization(FullFeaturedAgent):
             )
             
             # Mise en cache
+            self.logger.debug("Caching normalization result", extra={
+                "session_id": context.session_id,
+                "function": "cache_result"
+            })
+            
             await self.cache_result(result, context)
             
             await self.post_execute(result, context)
@@ -99,6 +187,14 @@ class AgentNormalization(FullFeaturedAgent):
         except Exception as e:
             execution_time = time.time() - start_time
             errors.append(str(e))
+            
+            self.logger.error("Normalization execution failed", extra={
+                "session_id": context.session_id,
+                "error": str(e),
+                "error_type": type(e).__name__,
+                "execution_time": execution_time,
+                "event_type": "normalization_error"
+            })
             
             return AgentResult(
                 agent_name=self.name,
@@ -113,17 +209,40 @@ class AgentNormalization(FullFeaturedAgent):
     
     async def _normalize_name_fake(self, raw_name: str) -> Dict[str, Any]:
         """Normalise un nom d'entreprise (VERSION FAKE pour tests)."""
+        start_time = time.time()
+        
+        self.logger.debug("Starting fake name normalization", extra={
+            "raw_name": raw_name,
+            "function": "_normalize_name_fake"
+        })
+        
         # Simulation d'un traitement de normalisation
         
         # Nettoyage de base
         normalized = raw_name.strip().upper()
         normalized = re.sub(r'\s+', ' ', normalized)
         
+        self.logger.debug("Basic cleaning completed", extra={
+            "normalized": normalized,
+            "function": "_normalize_name_fake"
+        })
+        
         # Suppression des formes juridiques courantes pour le nom de base
         legal_forms = ['SA', 'SAS', 'SARL', 'EURL', 'SNC', 'SCOP', 'CORP', 'LTD', 'INC']
         base_name = normalized
+        legal_forms_found = []
+        
         for form in legal_forms:
-            base_name = re.sub(f'\\b{form}\\b', '', base_name).strip()
+            if re.search(f'\\b{form}\\b', base_name):
+                legal_forms_found.append(form)
+                base_name = re.sub(f'\\b{form}\\b', '', base_name).strip()
+        
+        if legal_forms_found:
+            self.logger.debug("Legal forms removed", extra={
+                "legal_forms_found": legal_forms_found,
+                "base_name": base_name,
+                "function": "_normalize_name_fake"
+            })
         
         # Génération de variantes
         variants = [
@@ -135,19 +254,35 @@ class AgentNormalization(FullFeaturedAgent):
         ]
         
         # Variantes avec et sans accents (simulation)
+        accent_variants = []
         if 'É' in normalized:
-            variants.append(normalized.replace('É', 'E'))
+            accent_variants.append(normalized.replace('É', 'E'))
         if 'È' in normalized:
-            variants.append(normalized.replace('È', 'E'))
+            accent_variants.append(normalized.replace('È', 'E'))
+            
+        variants.extend(accent_variants)
         
         # Suppression des doublons
+        original_count = len(variants)
         variants = list(set(variants))
+        
+        execution_time = time.time() - start_time
+        
+        self.logger.debug("Name normalization completed", extra={
+            "original_count": original_count,
+            "final_count": len(variants),
+            "duplicates_removed": original_count - len(variants),
+            "execution_time": execution_time,
+            "function": "_normalize_name_fake"
+        })
         
         return {
             'normalized': base_name or normalized,
             'variants': variants,
             'confidence': 0.8,
-            'method': 'fake_normalization'
+            'method': 'fake_normalization',
+            'legal_forms_found': legal_forms_found,
+            'accent_variants_created': len(accent_variants)
         }
     
     async def _match_enterprise_fake(self, name_variants: List[str]) -> Dict[str, Any]:

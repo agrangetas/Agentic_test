@@ -6,12 +6,14 @@ import asyncio
 import json
 import gzip
 import pickle
+import time
 from typing import Any, Dict, List, Optional, Union
-import aioredis
+import redis.asyncio as aioredis
 from loguru import logger
 import yaml
 import os
 from datetime import datetime, timedelta
+from .logging_config import get_logging_manager
 
 
 class CacheManager:
@@ -27,6 +29,17 @@ class CacheManager:
             'sets': 0,
             'deletes': 0
         }
+        
+        # Configuration du logging
+        self.log_manager = get_logging_manager()
+        self.logger = logger.bind(component="cache_manager")
+        
+        self.logger.info("CacheManager initialized", extra={
+            "redis_url": redis_url,
+            "config_path": config_path,
+            "config_loaded": bool(self.config),
+            "event_type": "cache_manager_init"
+        })
         
     def _load_config(self, config_path: str) -> Dict[str, Any]:
         """Charge la configuration du cache."""
@@ -58,12 +71,32 @@ class CacheManager:
     
     async def connect(self):
         """Établit la connexion Redis."""
+        connect_start_time = time.time()
+        
+        self.logger.debug("Attempting Redis connection", extra={
+            "redis_url": self.redis_url,
+            "function": "connect"
+        })
+        
         try:
             self.redis = aioredis.from_url(self.redis_url, decode_responses=False)
             await self.redis.ping()
-            logger.info(f"Connected to Redis: {self.redis_url}")
+            
+            connect_time = time.time() - connect_start_time
+            self.logger.info("Connected to Redis successfully", extra={
+                "redis_url": self.redis_url,
+                "connect_time": connect_time,
+                "event_type": "redis_connected"
+            })
+            
         except Exception as e:
-            logger.error(f"Failed to connect to Redis: {e}")
+            connect_time = time.time() - connect_start_time
+            self.logger.error("Failed to connect to Redis", extra={
+                "redis_url": self.redis_url,
+                "error": str(e),
+                "connect_time": connect_time,
+                "event_type": "redis_connection_failed"
+            })
             raise
     
     async def disconnect(self):
@@ -134,14 +167,34 @@ class CacheManager:
     async def get(self, category: str, key: str) -> Optional[Any]:
         """Récupère une valeur du cache."""
         if not self.redis:
+            self.logger.warning("Redis not connected, cache get failed", extra={
+                "category": category,
+                "key": key,
+                "function": "get"
+            })
             return None
             
         cache_key = self._build_key(category, key)
+        get_start_time = time.time()
+        
+        self.logger.debug("Cache get operation started", extra={
+            "category": category,
+            "cache_key": cache_key,
+            "function": "get"
+        })
         
         try:
             data = await self.redis.get(cache_key)
+            get_time = time.time() - get_start_time
+            
             if data is None:
                 self.stats['misses'] += 1
+                self.logger.debug("Cache miss", extra={
+                    "category": category,
+                    "cache_key": cache_key,
+                    "get_time": get_time,
+                    "event_type": "cache_miss"
+                })
                 return None
                 
             # Décompression si nécessaire
@@ -151,12 +204,25 @@ class CacheManager:
             result = self._deserialize_data(decompressed_data)
             
             self.stats['hits'] += 1
-            logger.debug(f"Cache hit for key: {cache_key}")
+            self.logger.debug("Cache hit", extra={
+                "category": category,
+                "cache_key": cache_key,
+                "get_time": get_time,
+                "data_size": len(data),
+                "event_type": "cache_hit"
+            })
             return result
             
         except Exception as e:
-            logger.error(f"Cache get error for key {cache_key}: {e}")
+            get_time = time.time() - get_start_time
             self.stats['misses'] += 1
+            self.logger.error("Cache get error", extra={
+                "category": category,
+                "cache_key": cache_key,
+                "error": str(e),
+                "get_time": get_time,
+                "event_type": "cache_error"
+            })
             return None
     
     async def set(self, category: str, key: str, value: Any, ttl: Optional[int] = None) -> bool:

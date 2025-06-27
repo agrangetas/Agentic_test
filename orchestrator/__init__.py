@@ -9,15 +9,19 @@ __version__ = "0.1.0"
 __author__ = "Agent Company Intelligence Team"
 
 from .core import OrchestrationEngine, TaskContext, AgentTask
-from .model_router import ModelRouter
 from .cache_manager import CacheManager
-from .queue_manager import QueueManager
+from .logging_config import LoggingManager, get_agent_logger, setup_logging
+from .model_router import ModelRouter
+from .queue_manager import SimpleQueueManager
 
 __all__ = [
     "OrchestrationEngine",
     "TaskContext", 
     "AgentTask",
-    "ModelRouter",
     "CacheManager",
-    "QueueManager"
+    "LoggingManager",
+    "get_agent_logger",
+    "setup_logging",
+    "ModelRouter",
+    "SimpleQueueManager"
 ] 

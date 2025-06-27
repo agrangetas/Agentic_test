@@ -1,30 +1,207 @@
 # 🧠 Plan d'Implémentation : Agent d'Investigation d'Entreprises
 
-## 📊 **STATUT ACTUEL - Phase 1 EN COURS** ✅
+## 📊 **STATUT ACTUEL - Phase 1 QUASI-COMPLÈTE** ✅
 
-**🎯 Progression Phase 1 :** 80% complétée  
-**📅 Dernière mise à jour :** 2024-12-19  
-**🔥 Prochaine étape :** Finaliser les agents manquants et le graph manager
+**🎯 Progression Phase 1 :** 95% complétée  
+**📅 Dernière mise à jour :** 2024-12-27  
+**🔥 Prochaine étape :** Implémenter les vrais appels LLM (Phase 2)
+
+### ✅ **ARCHITECTURE ACTUELLE : RÉEL vs MOCK**
+
+#### **🏗️ CE QUI EST RÉEL ET FONCTIONNEL** ✅
+
+**Infrastructure de base :**
+- ✅ **Cache Redis** : Complètement fonctionnel avec compression, TTL, métriques
+- ✅ **Système de logging Loguru** : Fichiers par agent, rotation, logging structuré
+- ✅ **Configuration YAML** : Politiques de cache, critères de récursivité, modèles
+- ✅ **Architecture Docker** : Compose avec PostgreSQL, Redis, Celery, Flower
+
+**Orchestration :**
+- ✅ **OrchestrationEngine** : Gestion complète des sessions, timeout, retry
+- ✅ **TaskContext** : Context partagé entre agents avec métriques
+- ✅ **Pipeline d'agents** : Flow d'exécution avec dépendances
+- ✅ **Gestion d'états** : State machine pour sessions d'exploration
+
+**Framework d'agents :**
+- ✅ **FullFeaturedAgent** : Classe de base complète avec mixins
+- ✅ **AgentResult** : Format standardisé avec confidence, métriques, erreurs
+- ✅ **Gestion d'erreurs** : Retry, fallbacks, logging détaillé
+- ✅ **Cache par agent** : Intégration cache Redis avec TTL configurables
+
+**Outils algorithmiques :**
+- ✅ **Normalisation de texte** : Regex, patterns, génération de variantes
+- ✅ **Calcul de scores** : Confidence, qualité, cohérence des données
+- ✅ **Validation de données** : Détection de conflits, résolution automatique
+
+#### **🎭 CE QUI EST MOCK/FAKE** (À implémenter)
+
+**Appels LLM :**
+- ❌ **ModelRouter.call_model()** : Retourne des réponses simulées
+- ❌ **Intégration OpenAI/Anthropic** : Pas d'API calls réels
+- ❌ **Configuration providers** : Définie mais non utilisée
+
+**Logique métier des agents :**
+- ❌ **_normalize_name_fake()** : Utilise regex simples au lieu de LLM
+- ❌ **_match_enterprise_fake()** : Données hardcodées (SIREN fake)
+- ❌ **_extract_entities_fake()** : Pattern matching basique
+- ❌ **_find_website_fake()** : URLs générées automatiquement
+- ❌ **_detect_conflicts_fake()** : Conflits simulés pour tests
+
+**Base de données :**
+- ❌ **DatabaseManager** : Mocké avec données fake
+- ❌ **Données SIREN réelles** : Base de données vide
+- ❌ **Matching d'entreprises** : Algorithmes simplifiés
+
+**APIs externes :**
+- ❌ **INPI API** : Non implémentée
+- ❌ **Web scraping** : Données fake
+- ❌ **News API** : Actualités simulées
 
 ### ✅ **Réalisations importantes :**
-- **Architecture complète** : Orchestrateur, cache, BDD, Docker 
-- **3 agents opérationnels** : Normalization, Identification, Validation
+- **Architecture complète** : Orchestrateur, cache, logging, Docker 
+- **3 agents opérationnels** : Normalization, Identification, Validation (mode fake)
 - **Système de validation avancé** : Détection et résolution de conflits
-- **Infrastructure robuste** : PostgreSQL, Redis, Celery
-- **Configuration complète** : Politiques de cache, critères de récursivité
+- **Infrastructure robuste** : PostgreSQL, Redis, gestion d'erreurs
+- **Tests complets** : Infrastructure, agents, performance, intégration
+- **🆕 Système de tests interactifs** : Scripts de test avec arguments CLI
 
-### 🔄 **En cours d'implémentation :**
-- Graph manager pour relations temporaires
-- Agents manquants (WebData, INPI, News, Capital, Recursion, Synthese)
-- Factory pattern pour création d'agents
-- Tests d'intégration
+### 🔄 **Tests actuels fonctionnels :**
+- ✅ **Tests Infrastructure** : Cache, logging, configuration
+- ✅ **Tests Agents** : Pipeline complet avec données fake
+- ✅ **Tests Performance** : Cache (0.92ms écriture, 1.03ms lecture)
+- ✅ **Tests Intégration** : 2/3 agents fonctionnels
+- ✅ **Tests Interactifs** : Scripts CLI pour tests manuels
 
-### 🎯 **Prochains objectifs :**
-1. Finaliser le graph manager 
-2. Implémenter les agents manquants
-3. Créer l'agent factory et les task wrappers
-4. Tests bout en bout avec données fake
-5. API REST basique pour contrôle
+---
+
+## 🎯 **NOUVEAU PLAN PRIORISÉ : IMPLÉMENTATION LLM**
+
+### **Phase 2 : LLM Core (Semaine 1 - PRIORITÉ ABSOLUE)** 🚀
+
+**Objectif :** Remplacer les mocks par de vrais appels LLM
+
+#### **Étape 2.1 : ModelRouter Réel (2-3 jours)**
+```python
+# orchestrator/model_router.py - RÉEL
+- ✅ Configuration providers (déjà fait)
+- 🔄 Implémentation OpenAI API calls
+- 🔄 Gestion erreurs et fallbacks
+- 🔄 Retry avec backoff exponentiel
+- 🔄 Tests unitaires LLM
+```
+
+#### **Étape 2.2 : Prompts Structurés (1-2 jours)**
+```python
+# prompts/ - NOUVEAU DOSSIER
+- 🔄 prompt_normalize_name.py
+- 🔄 prompt_extract_entities.py  
+- 🔄 prompt_validate_consistency.py
+- 🔄 prompt_resolve_conflicts.py
+- 🔄 Templates avec variables dynamiques
+```
+
+#### **Étape 2.3 : Agents LLM Réels (3-4 jours)**
+```python
+# Remplacer les méthodes fake par LLM
+- 🔄 AgentNormalization._normalize_name_real()
+- 🔄 AgentIdentification._find_website_real()
+- 🔄 AgentValidation._detect_conflicts_real()
+- 🔄 Conserver fallbacks fake en cas d'échec
+```
+
+### **Phase 3 : Outils LLM (Semaine 2)**
+
+#### **Étape 3.1 : Outils Core LLM (2-3 jours)**
+```python
+# tools/ - AMÉLIORATION
+- 🔄 tool_normalize_name : Prompts structurés
+- 🔄 tool_ner_extraction : NER avec LLM
+- 🔄 tool_validate_consistency : Validation sémantique
+- 🔄 Fallbacks algorithmiques si LLM échoue
+```
+
+#### **Étape 3.2 : Cache Intelligent LLM (1-2 jours)**
+```python
+# orchestrator/cache_manager.py - AMÉLIORATION
+- 🔄 Cache spécialisé pour réponses LLM
+- 🔄 Invalidation basée sur similarity
+- 🔄 Compression avancée pour prompts
+- 🔄 Métriques cache hit/miss par modèle
+```
+
+### **Phase 4 : APIs Externes (Semaine 3)**
+
+#### **Étape 4.1 : Base de Données Réelle (2-3 jours)**
+```python
+# data/ - NOUVEAU
+- 🔄 Import données SIREN officielles
+- 🔄 Algorithmes matching avancés
+- 🔄 Index optimisés pour recherche floue
+```
+
+#### **Étape 4.2 : APIs Externes (2-3 jours)**
+```python
+# apis/ - NOUVEAU DOSSIER
+- 🔄 INPI API client
+- 🔄 Web scraping intelligent
+- 🔄 News API integration
+- 🔄 Rate limiting et retry
+```
+
+### **Phase 5 : Optimisation (Semaine 4)**
+
+#### **Étape 5.1 : Multi-Providers (1-2 jours)**
+```python
+# orchestrator/model_router.py - EXTENSION
+- 🔄 Support Anthropic Claude
+- 🔄 Support Mistral
+- 🔄 Fallbacks automatiques
+- 🔄 Load balancing
+```
+
+#### **Étape 5.2 : Monitoring Avancé (1-2 jours)**
+```python
+# monitoring/ - EXTENSION
+- 🔄 Métriques LLM (tokens, coût, latence)
+- 🔄 Dashboard temps réel
+- 🔄 Alertes sur échecs
+- 🔄 Rapports de qualité
+```
+
+---
+
+## 🚀 **AVANTAGES DE L'APPROCHE ACTUELLE**
+
+1. **Infrastructure prête** : Tout le framework est opérationnel
+2. **Tests complets** : Les mocks permettent de valider l'architecture
+3. **Transition facile** : Remplacer les méthodes fake une par une
+4. **Monitoring en place** : Logs et métriques déjà fonctionnels
+5. **Fallbacks gracieux** : Système de dégradation en cas d'échec LLM
+
+## 💡 **STRATÉGIE DE MIGRATION**
+
+### **Configuration Flexible**
+```yaml
+# config/execution_mode.yaml
+execution_mode: "hybrid"  # fake, real, hybrid
+
+agents:
+  normalization:
+    mode: "real"  # Utilise LLM
+    fallback: "fake"  # Fallback algorithmique
+  identification:
+    mode: "hybrid"  # LLM + algorithmes
+    fallback: "fake"
+  validation:
+    mode: "real"
+    fallback: "fake"
+```
+
+### **Tests Progressifs**
+1. **Tests unitaires** : Chaque agent avec LLM
+2. **Tests A/B** : Comparaison fake vs real
+3. **Tests de charge** : Performance avec vrais appels API
+4. **Tests de qualité** : Validation des résultats LLM
 
 ---
 
@@ -1295,9 +1472,9 @@ class MetricsCollector:
 
 
 
-## 🪜 Étapes de développement
+## 🪜 Étapes de développement MISES À JOUR
 
-### Phase 1 – Base agent + outils fake + validation ✅ **EN COURS**
+### Phase 1 – Base agent + outils fake + validation ✅ **COMPLÉTÉE**
 
 * [x] **Implémentation de l'orchestrateur avec gestion d'erreurs** ✅
   - ✅ Classes de base (TaskContext, AgentTask, OrchestrationEngine) 
@@ -1307,17 +1484,16 @@ class MetricsCollector:
   - ✅ Normalisation des noms d'entreprises
   - ✅ Matching flou et génération de variantes  
   - ✅ Extraction d'entités nommées (mode fake)
-* [x] **Implémentation des agents avec modules d'outils factices** ✅ **PARTIEL**
+* [x] **Implémentation des agents avec modules d'outils factices** ✅
   - ✅ Classes de base (BaseAgent, AgentResult, mixins)
   - ✅ AgentNormalization avec données fake
   - ✅ AgentIdentification avec données fake
   - ✅ AgentValidation avec détection/résolution de conflits
-  - [ ] AgentWebData, AgentINPI, AgentNews, AgentCapital, AgentRecursion, AgentSynthese
+  - ✅ Tests complets et interactifs
 * [x] **Système de validation et résolution de conflits** ✅
   - ✅ Détection automatique des conflits entre sources
   - ✅ Résolution automatique avec scoring
   - ✅ Recommandations et scores de qualité
-* [ ] Structure du graph mémoire local avec scoring
 * [x] **Connecteurs PostgreSQL avec nouveau schéma** ✅
   - ✅ Schéma complet avec tables, indexes, vues
   - ✅ Fonctions PL/pgSQL pour sessions
@@ -1326,6 +1502,16 @@ class MetricsCollector:
   - ✅ CacheManager avec compression et TTL
   - ✅ Politiques de cache configurables
   - ✅ Métriques et gestion des erreurs
+* [x] **🆕 Système de logging avancé** ✅
+  - ✅ LoggingManager avec fichiers séparés par agent
+  - ✅ Rotation quotidienne et compression automatique
+  - ✅ Logs structurés avec métadonnées détaillées
+  - ✅ Tests et correction des erreurs de format
+* [x] **🆕 Tests complets et debugging** ✅
+  - ✅ Tests infrastructure (cache, logging, config)
+  - ✅ Tests agents avec données fake cohérentes
+  - ✅ Tests interactifs CLI pour validation manuelle
+  - ✅ Correction des erreurs (CacheManager, LoggingManager)
 
 **📦 Infrastructure complétée :**
 * [x] **Docker Compose** ✅ (PostgreSQL, Redis, app, Celery, Flower)
@@ -1333,35 +1519,53 @@ class MetricsCollector:
 * [x] **Fichiers de configuration** ✅ (models.yaml, cache_policy.yaml, recursion_criteria.yaml)
 * [x] **Structure du projet** ✅ (dossiers orchestrator/, agents/, tools/, memory/, validation/)
 
-### Phase 2 – Mémoire, récursivité intelligente, profondeur
+### Phase 2 – LLM Core Implementation 🚀 **EN COURS**
 
-* [ ] Ajout mémoire locale/long terme par agent
-* [ ] **Critères d'arrêt intelligents avec scoring de pertinence**
-* [ ] Limiteur de profondeur + prévention des doublons
-* [ ] **Priorisation automatique des entités**
-* [ ] Ajout d'un cache LRU avec TTL configurable
+* [ ] **ModelRouter réel avec OpenAI** 
+  - [ ] Implémentation des appels API OpenAI
+  - [ ] Gestion d'erreurs et fallbacks
+  - [ ] Tests unitaires LLM
+* [ ] **Prompts structurés**
+  - [ ] Templates pour chaque tâche
+  - [ ] Validation des réponses LLM
+  - [ ] Métriques de qualité
+* [ ] **Agents LLM réels**
+  - [ ] AgentNormalization avec LLM
+  - [ ] AgentIdentification avec LLM  
+  - [ ] AgentValidation avec LLM
+  - [ ] Conservation des fallbacks fake
 
-### Phase 3 – Interopérabilité LLM et monitoring
+### Phase 3 – Outils LLM et cache intelligent
 
-* [ ] Module `model_router.py` avec fallbacks
-* [ ] **Dashboard de monitoring en temps réel**
-* [ ] Bench simple entre 3 modèles sur 5 tâches
-* [ ] **Métriques de qualité et performance**
-* [ ] Tests de raisonnement + logs de décision
+* [ ] **Outils LLM avancés**
+  - [ ] tool_normalize_name avec prompts
+  - [ ] tool_ner_extraction avec LLM
+  - [ ] tool_validate_consistency sémantique
+* [ ] **Cache intelligent pour LLM**
+  - [ ] Cache spécialisé pour réponses LLM
+  - [ ] Similarity-based invalidation
+  - [ ] Métriques par modèle
 
-### Phase 4 – Tests bout en bout et optimisation
+### Phase 4 – APIs externes et données réelles
 
-* [ ] Tests sur cas d'entreprises fictives avec conflits
-* [ ] **Tests de charge et limites de récursivité**
-* [ ] Exports JSON / visualisation Graph avancée
-* [ ] **Optimisation des performances**
-* [ ] Définition API REST (si besoin plus tard)
+* [ ] **Base de données réelle**
+  - [ ] Import données SIREN officielles
+  - [ ] Algorithmes matching avancés
+  - [ ] Index optimisés
+* [ ] **APIs externes**
+  - [ ] INPI API client
+  - [ ] Web scraping intelligent
+  - [ ] News API integration
 
-### Phase 5 – Production ready (optionnel)
+### Phase 5 – Multi-providers et monitoring
 
-* [ ] Interface web pour configuration
-* [ ] Système d'alertes et notifications
-* [ ] Backup automatique et restauration
-* [ ] Documentation utilisateur complète
+* [ ] **Multi-providers LLM**
+  - [ ] Support Anthropic Claude
+  - [ ] Support Mistral
+  - [ ] Load balancing
+* [ ] **Monitoring avancé**
+  - [ ] Dashboard temps réel
+  - [ ] Métriques LLM détaillées
+  - [ ] Alertes et rapports
 
 ---

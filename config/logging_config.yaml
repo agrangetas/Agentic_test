@@ -1,0 +1,115 @@
+---
+# Configuration du système de logging
+# Fichiers séparés par agent avec rotation quotidienne
+
+logs_directory: "logs"
+
+# Configuration du logging console
+console:
+  enabled: true
+  level: "INFO"
+  format: "<green>{time:HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+  colorize: true
+
+# Configuration du logging fichier principal
+file:
+  enabled: true
+  level: "DEBUG"
+  rotation: "1 day"
+  retention: "30 days"
+  compression: "gz"
+  format: "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{function}:{line} | {process}:{thread} | {message}"
+  
+# Configuration du logging par agent
+agents:
+  enabled: true
+  level: "DEBUG"
+  rotation: "1 day"
+  retention: "30 days"
+  compression: "gz"
+  format: "{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {function}:{line} | {extra[session_id]:-} | {extra[execution_time]:-} | {message}"
+  
+# Configuration du logging structuré
+structured:
+  enabled: true
+  include_extra: true
+  json_format: false
+  
+# Configuration par composant
+components:
+  orchestrator:
+    level: "DEBUG"
+    include_metrics: true
+    
+  cache_manager:
+    level: "DEBUG"
+    log_operations: true
+    
+  agents:
+    normalization:
+      level: "DEBUG"
+      log_fake_data: true
+      
+    identification:
+      level: "DEBUG"
+      log_fake_data: true
+      
+    validation:
+      level: "DEBUG"
+      log_conflicts: true
+      
+    webdata:
+      level: "INFO"
+      
+    inpi:
+      level: "INFO"
+      
+    news:
+      level: "INFO"
+      
+    capital:
+      level: "INFO"
+      
+    recursion:
+      level: "INFO"
+      
+    synthese:
+      level: "INFO"
+
+# Niveaux de log par type d'événement
+event_levels:
+  session_start: "INFO"
+  session_end: "INFO"
+  session_error: "ERROR"
+  agent_init: "DEBUG"
+  agent_execution_start: "INFO"
+  agent_execution_completed: "INFO"
+  agent_execution_errors: "WARNING"
+  cache_hit: "DEBUG"
+  cache_miss: "DEBUG"
+  cache_error: "ERROR"
+  api_call: "DEBUG"
+  performance_metric: "INFO"
+  data_quality: "INFO"
+  validation_errors: "WARNING"
+  conflict_detected: "WARNING"
+  conflict_resolved: "INFO"
+
+# Configuration du nettoyage automatique
+cleanup:
+  enabled: true
+  max_age_days: 30
+  cleanup_schedule: "0 2 * * *"  # Tous les jours à 2h du matin
+  
+# Configuration des alertes (optionnel)
+alerts:
+  enabled: false
+  error_threshold: 10  # Nombre d'erreurs par heure
+  webhook_url: ""
+  
+# Configuration de l'export des métriques
+metrics:
+  enabled: true
+  export_interval: 300  # 5 minutes
+  export_format: "json"
+  export_path: "logs/metrics" 

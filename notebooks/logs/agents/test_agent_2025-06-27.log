@@ -1,0 +1,5 @@
+2025-06-27 15:31:03.127 | INFO     | test_logging:43 | Test de log spécifique à un agent
+2025-06-27 15:31:15.989 | INFO     | test_logging_system:349 | Test agent log
+2025-06-27 15:31:15.990 | INFO     | log_performance_metric:203 | 📊 test_function_performance: 0.123s
+2025-06-27 15:31:15.991 | INFO     | log_session_event:266 | 🎯 Session e7ccee06-9c28-4fcb-bd5b-454601f6dccf: test_event
+2025-06-27 15:31:20.068 | INFO     | test_logging:43 | Test de log spécifique à un agent

@@ -1,0 +1,163 @@
+2025-06-27 15:22:27.394 | INFO     | __init__:62 | Agent initialized
+2025-06-27 15:22:27.395 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:22:27.395 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:22:27.396 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:22:27.397 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:22:27.397 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:22:27.398 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:22:27.398 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:22:27.399 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:22:27.399 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:22:27.400 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:22:27.400 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:22:27.401 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:22:27.401 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:22:27.402 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:22:27.402 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:22:27.403 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:22:27.404 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:22:27.404 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:22:27.407 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:22:27.407 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.442 | INFO     | __init__:62 | Agent initialized
+2025-06-27 15:23:24.443 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.443 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.444 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.445 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.446 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.446 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.446 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.447 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:23:24.447 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.448 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.448 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.448 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.448 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.449 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.449 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.449 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.450 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.450 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.453 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.453 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.556 | INFO     | __init__:62 | Agent initialized
+2025-06-27 15:23:24.557 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.558 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.558 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.560 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.561 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.561 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.562 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.562 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:23:24.563 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.563 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.564 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.564 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.565 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.565 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.566 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.566 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.567 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.568 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.570 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.571 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.584 | INFO     | __init__:62 | Agent initialized
+2025-06-27 15:23:24.597 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.597 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.598 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.599 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.599 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.600 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.600 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.600 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.600 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.601 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.601 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.601 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.601 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.602 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.602 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.602 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.603 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.604 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.605 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.617 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.617 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.618 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.619 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.619 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.619 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.619 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.620 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:23:24.620 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.620 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.621 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.621 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.621 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.622 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.622 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.622 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.622 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.623 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.624 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.625 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.637 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.638 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.638 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.640 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.641 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.641 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.642 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.642 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:23:24.643 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.643 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.643 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.644 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.644 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.645 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.645 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.645 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.646 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.646 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.648 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.649 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.664 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.664 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.664 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.666 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.666 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.666 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.666 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.667 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:23:24.667 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.668 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.668 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.668 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.669 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.669 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.669 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.669 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.670 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.670 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.672 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.672 | WARNING  | post_execute:114 | Agent execution had errors
+2025-06-27 15:23:24.684 | DEBUG    | execute:35 | Starting normalization execution
+2025-06-27 15:23:24.685 | INFO     | pre_execute:82 | Starting agent execution
+2025-06-27 15:23:24.685 | DEBUG    | execute:45 | Checking cache for normalization result
+2025-06-27 15:23:24.686 | DEBUG    | execute:60 | Validating input data
+2025-06-27 15:23:24.686 | DEBUG    | execute:70 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.687 | DEBUG    | _normalize_name_fake:214 | Starting fake name normalization
+2025-06-27 15:23:24.687 | DEBUG    | _normalize_name_fake:225 | Basic cleaning completed
+2025-06-27 15:23:24.688 | DEBUG    | _normalize_name_fake:241 | Legal forms removed
+2025-06-27 15:23:24.688 | DEBUG    | _normalize_name_fake:271 | Name normalization completed
+2025-06-27 15:23:24.688 | DEBUG    | execute:78 | Name normalization completed
+2025-06-27 15:23:24.688 | DEBUG    | execute:87 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.689 | DEBUG    | execute:95 | Enterprise matching completed
+2025-06-27 15:23:24.689 | DEBUG    | execute:104 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.689 | DEBUG    | execute:112 | Named entity extraction completed
+2025-06-27 15:23:24.689 | DEBUG    | execute:132 | Validating consolidated data
+2025-06-27 15:23:24.690 | WARNING  | execute:141 | Data validation errors found
+2025-06-27 15:23:24.690 | INFO     | execute:149 | Normalization execution successful
+2025-06-27 15:23:24.690 | DEBUG    | execute:177 | Caching normalization result
+2025-06-27 15:23:24.692 | INFO     | post_execute:101 | Agent execution completed
+2025-06-27 15:23:24.692 | WARNING  | post_execute:114 | Agent execution had errors

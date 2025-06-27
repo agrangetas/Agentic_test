@@ -10,6 +10,7 @@ from dataclasses import dataclass
 import time
 import logging
 from enum import Enum
+from loguru import logger
 
 
 class AgentState(Enum):
@@ -47,10 +48,23 @@ class BaseAgent(ABC):
         self.name = name
         self.config = config
         self.state = AgentState.IDLE
-        self.logger = logging.getLogger(f"agent.{name}")
         self.memory: Dict[str, Any] = {}
         self.tools: List[Any] = []
         self.llm_client: Optional[Any] = None
+        
+        # Configuration du logging spécifique à l'agent
+        try:
+            from orchestrator.logging_config import get_agent_logger
+            self.logger = get_agent_logger(name)
+        except ImportError:
+            self.logger = logger.bind(agent_name=name)
+        
+        self.logger.info("Agent initialized", extra={
+            "agent_name": name,
+            "config_keys": list(config.keys()) if config else [],
+            "state": self.state.value,
+            "event_type": "agent_init"
+        })
         
     @abstractmethod
     async def execute(self, context: 'TaskContext') -> AgentResult:
@@ -65,7 +79,14 @@ class BaseAgent(ABC):
     async def pre_execute(self, context: 'TaskContext'):
         """Préparation avant exécution."""
         self.state = AgentState.PROCESSING
-        self.logger.info(f"Starting execution for {context.enterprise_name}")
+        self.logger.info("Starting agent execution", extra={
+            "agent_name": self.name,
+            "session_id": context.session_id,
+            "enterprise_name": context.enterprise_name,
+            "current_depth": context.current_depth,
+            "state": self.state.value,
+            "event_type": "agent_execution_start"
+        })
     
     async def post_execute(self, result: AgentResult, context: 'TaskContext'):
         """Nettoyage après exécution."""
@@ -76,8 +97,26 @@ class BaseAgent(ABC):
         context.metrics[f"{self.name}_confidence"] = result.confidence_score
         context.metrics[f"{self.name}_execution_time"] = result.execution_time
         
-        # Logging
-        self.logger.info(f"Completed execution: success={result.success}, confidence={result.confidence_score}")
+        # Logging détaillé
+        self.logger.info("Agent execution completed", extra={
+            "agent_name": self.name,
+            "session_id": context.session_id,
+            "success": result.success,
+            "confidence_score": result.confidence_score,
+            "execution_time": result.execution_time,
+            "error_count": len(result.errors),
+            "warning_count": len(result.warnings),
+            "state": self.state.value,
+            "event_type": "agent_execution_completed"
+        })
+        
+        if result.errors:
+            self.logger.warning("Agent execution had errors", extra={
+                "agent_name": self.name,
+                "session_id": context.session_id,
+                "errors": result.errors,
+                "event_type": "agent_execution_errors"
+            })
 
 
 class DataValidationMixin:

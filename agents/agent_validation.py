@@ -27,38 +27,124 @@ class AgentValidation(FullFeaturedAgent):
         errors = []
         warnings = []
         
+        self.logger.debug("Starting validation execution", extra={
+            "session_id": context.session_id,
+            "enterprise_name": context.enterprise_name,
+            "collected_agents": list(context.collected_data.keys()),
+            "function": "execute"
+        })
+        
         try:
             await self.pre_execute(context)
+            
+            self.logger.debug("Validating input data", extra={
+                "session_id": context.session_id,
+                "data_sources_count": len(context.collected_data),
+                "function": "validate_input"
+            })
             
             if not self.validate_input(context):
                 raise ValueError("Need at least 2 data sources to validate")
             
             # 1. Détection des conflits entre sources
+            self.logger.debug("Starting conflict detection (fake mode)", extra={
+                "session_id": context.session_id,
+                "sources_to_analyze": list(context.collected_data.keys()),
+                "function": "_detect_conflicts_fake"
+            })
+            
             conflicts = await self._detect_conflicts_fake(context.collected_data)
             
+            self.logger.debug("Conflict detection completed", extra={
+                "session_id": context.session_id,
+                "conflicts_found": len(conflicts),
+                "conflict_types": [c.get('type') for c in conflicts],
+                "function": "_detect_conflicts_fake"
+            })
+            
             # 2. Résolution automatique des conflits
+            self.logger.debug("Starting conflict resolution (fake mode)", extra={
+                "session_id": context.session_id,
+                "conflicts_to_resolve": len(conflicts),
+                "function": "_resolve_conflicts_fake"
+            })
+            
             resolved_conflicts = await self._resolve_conflicts_fake(conflicts)
             
+            self.logger.debug("Conflict resolution completed", extra={
+                "session_id": context.session_id,
+                "conflicts_resolved": len(resolved_conflicts),
+                "resolution_methods": [r.get('resolution_method') for r in resolved_conflicts],
+                "function": "_resolve_conflicts_fake"
+            })
+            
             # 3. Calcul du score de cohérence global
+            self.logger.debug("Calculating consistency score", extra={
+                "session_id": context.session_id,
+                "data_sources": len(context.collected_data),
+                "conflicts": len(conflicts),
+                "resolutions": len(resolved_conflicts),
+                "function": "_calculate_consistency_score"
+            })
+            
             consistency_score = await self._calculate_consistency_score(
                 context.collected_data, conflicts, resolved_conflicts
             )
             
+            self.logger.debug("Consistency score calculated", extra={
+                "session_id": context.session_id,
+                "consistency_score": consistency_score,
+                "function": "_calculate_consistency_score"
+            })
+            
             # 4. Identification des entités liées pour récursion
+            self.logger.debug("Identifying linked entities (fake mode)", extra={
+                "session_id": context.session_id,
+                "function": "_identify_linked_entities_fake"
+            })
+            
             linked_entities = await self._identify_linked_entities_fake(context.collected_data)
+            
+            self.logger.debug("Linked entities identification completed", extra={
+                "session_id": context.session_id,
+                "linked_entities_found": len(linked_entities),
+                "entity_types": [e.get('type') for e in linked_entities],
+                "function": "_identify_linked_entities_fake"
+            })
+            
+            # Calcul du score de qualité
+            data_quality_score = self._calculate_quality_score(context.collected_data)
+            
+            self.logger.debug("Data quality score calculated", extra={
+                "session_id": context.session_id,
+                "data_quality_score": data_quality_score,
+                "function": "_calculate_quality_score"
+            })
             
             # Données de validation consolidées
             validation_data = {
                 'conflicts_detected': conflicts,
                 'conflicts_resolved': resolved_conflicts,
                 'consistency_score': consistency_score,
-                'data_quality_score': self._calculate_quality_score(context.collected_data),
+                'data_quality_score': data_quality_score,
                 'linked_entities': linked_entities,
                 'validation_summary': self._generate_validation_summary(conflicts, resolved_conflicts),
                 'recommendations': self._generate_recommendations(conflicts, consistency_score)
             }
             
             execution_time = time.time() - start_time
+            
+            self.logger.info("Validation execution successful", extra={
+                "session_id": context.session_id,
+                "execution_time": execution_time,
+                "consistency_score": consistency_score,
+                "data_quality_score": data_quality_score,
+                "conflicts_detected": len(conflicts),
+                "conflicts_resolved": len(resolved_conflicts),
+                "linked_entities_found": len(linked_entities),
+                "sources_validated": len(context.collected_data),
+                "event_type": "validation_success"
+            })
             
             result = AgentResult(
                 agent_name=self.name,
@@ -82,6 +168,15 @@ class AgentValidation(FullFeaturedAgent):
         except Exception as e:
             execution_time = time.time() - start_time
             errors.append(str(e))
+            
+            self.logger.error("Validation execution failed", extra={
+                "session_id": context.session_id,
+                "error": str(e),
+                "error_type": type(e).__name__,
+                "execution_time": execution_time,
+                "collected_sources": list(context.collected_data.keys()) if context.collected_data else [],
+                "event_type": "validation_error"
+            })
             
             return AgentResult(
                 agent_name=self.name,

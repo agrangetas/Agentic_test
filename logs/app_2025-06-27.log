@@ -1,0 +1,675 @@
+2025-06-27 13:37:24.390 | INFO     | orchestrator.logging_config:__init__:33 | 1:140652316081024 | LoggingManager initialized
+2025-06-27 13:37:24.391 | INFO     | orchestrator.logging_config:setup_logging:363 | 1:140652316081024 | Logging system configured successfully
+2025-06-27 13:37:24.391 | INFO     | __main__:initialize_system:63 | 1:140652316081024 | System initialization started
+2025-06-27 13:37:24.398 | INFO     | orchestrator.cache_manager:__init__:37 | 1:140652316081024 | CacheManager initialized
+2025-06-27 13:37:24.398 | DEBUG    | orchestrator.cache_manager:connect:76 | 1:140652316081024 | Attempting Redis connection
+2025-06-27 13:37:24.421 | INFO     | orchestrator.cache_manager:connect:86 | 1:140652316081024 | Connected to Redis successfully
+2025-06-27 13:37:24.422 | INFO     | __main__:initialize_system:76 | 1:140652316081024 | Cache manager initialized successfully
+2025-06-27 13:37:24.422 | INFO     | orchestrator.core:__init__:122 | 1:140652316081024 | OrchestrationEngine initialized
+2025-06-27 13:37:24.422 | INFO     | __main__:initialize_system:97 | 1:140652316081024 | System initialization completed successfully
+2025-06-27 13:37:24.423 | INFO     | __main__:run_test_session:107 | 1:140652316081024 | Starting test session
+2025-06-27 13:37:24.423 | INFO     | orchestrator.core:execute_session:134 | 1:140652316081024 | Starting exploration session
+2025-06-27 13:37:24.423 | DEBUG    | orchestrator.core:_create_context:182 | 1:140652316081024 | Creating session context
+2025-06-27 13:37:24.423 | DEBUG    | orchestrator.core:_create_context:196 | 1:140652316081024 | Session context created successfully
+2025-06-27 13:37:24.424 | DEBUG    | orchestrator.core:execute_session:145 | 1:140652316081024 | Session context created
+2025-06-27 13:37:24.424 | INFO     | orchestrator.core:execute_session:155 | 1:140652316081024 | Session initialized successfully
+2025-06-27 13:37:24.424 | INFO     | __main__:run_test_session:122 | 1:140652316081024 | Test session completed successfully
+2025-06-27 13:37:24.426 | ERROR    | __main__:main:234 | 1:140652316081024 | Application failed
+2025-06-27 13:37:24.427 | INFO     | __main__:cleanup_system:142 | 1:140652316081024 | Starting system cleanup
+2025-06-27 13:37:24.428 | INFO     | orchestrator.cache_manager:disconnect:106 | 1:140652316081024 | Disconnected from Redis
+2025-06-27 13:37:24.428 | DEBUG    | __main__:cleanup_system:150 | 1:140652316081024 | Cache manager disconnected
+2025-06-27 13:37:24.429 | INFO     | __main__:cleanup_system:155 | 1:140652316081024 | Log statistics
+2025-06-27 13:37:24.429 | INFO     | __main__:cleanup_system:160 | 1:140652316081024 | System cleanup completed
+2025-06-27 13:41:06.031 | INFO     | orchestrator.logging_config:__init__:33 | 1:139800291171200 | LoggingManager initialized
+2025-06-27 13:41:06.031 | INFO     | orchestrator.logging_config:setup_logging:363 | 1:139800291171200 | Logging system configured successfully
+2025-06-27 13:41:06.031 | INFO     | __main__:initialize_system:63 | 1:139800291171200 | System initialization started
+2025-06-27 13:41:06.038 | INFO     | orchestrator.cache_manager:__init__:37 | 1:139800291171200 | CacheManager initialized
+2025-06-27 13:41:06.039 | DEBUG    | orchestrator.cache_manager:connect:76 | 1:139800291171200 | Attempting Redis connection
+2025-06-27 13:41:06.063 | INFO     | orchestrator.cache_manager:connect:86 | 1:139800291171200 | Connected to Redis successfully
+2025-06-27 13:41:06.064 | INFO     | __main__:initialize_system:76 | 1:139800291171200 | Cache manager initialized successfully
+2025-06-27 13:41:06.064 | INFO     | orchestrator.core:__init__:122 | 1:139800291171200 | OrchestrationEngine initialized
+2025-06-27 13:41:06.064 | INFO     | __main__:initialize_system:97 | 1:139800291171200 | System initialization completed successfully
+2025-06-27 13:41:06.065 | INFO     | __main__:run_test_session:107 | 1:139800291171200 | Starting test session
+2025-06-27 13:41:06.065 | INFO     | orchestrator.core:execute_session:134 | 1:139800291171200 | Starting exploration session
+2025-06-27 13:41:06.065 | DEBUG    | orchestrator.core:_create_context:182 | 1:139800291171200 | Creating session context
+2025-06-27 13:41:06.065 | DEBUG    | orchestrator.core:_create_context:196 | 1:139800291171200 | Session context created successfully
+2025-06-27 13:41:06.066 | DEBUG    | orchestrator.core:execute_session:145 | 1:139800291171200 | Session context created
+2025-06-27 13:41:06.066 | INFO     | orchestrator.core:execute_session:155 | 1:139800291171200 | Session initialized successfully
+2025-06-27 13:41:06.066 | INFO     | __main__:run_test_session:122 | 1:139800291171200 | Test session completed successfully
+2025-06-27 13:41:06.069 | INFO     | __main__:cleanup_system:142 | 1:139800291171200 | Starting system cleanup
+2025-06-27 13:41:06.070 | INFO     | orchestrator.cache_manager:disconnect:106 | 1:139800291171200 | Disconnected from Redis
+2025-06-27 13:41:06.070 | DEBUG    | __main__:cleanup_system:150 | 1:139800291171200 | Cache manager disconnected
+2025-06-27 13:41:06.071 | INFO     | __main__:cleanup_system:155 | 1:139800291171200 | Log statistics
+2025-06-27 13:41:06.071 | INFO     | __main__:cleanup_system:160 | 1:139800291171200 | System cleanup completed
+2025-06-27 13:41:48.876 | INFO     | orchestrator.logging_config:__init__:33 | 1:140078125038464 | LoggingManager initialized
+2025-06-27 13:41:48.876 | INFO     | orchestrator.logging_config:setup_logging:363 | 1:140078125038464 | Logging system configured successfully
+2025-06-27 13:41:48.877 | INFO     | __main__:initialize_system:63 | 1:140078125038464 | System initialization started
+2025-06-27 13:41:48.884 | INFO     | orchestrator.cache_manager:__init__:37 | 1:140078125038464 | CacheManager initialized
+2025-06-27 13:41:48.884 | DEBUG    | orchestrator.cache_manager:connect:76 | 1:140078125038464 | Attempting Redis connection
+2025-06-27 13:41:48.906 | INFO     | orchestrator.cache_manager:connect:86 | 1:140078125038464 | Connected to Redis successfully
+2025-06-27 13:41:48.906 | INFO     | __main__:initialize_system:76 | 1:140078125038464 | Cache manager initialized successfully
+2025-06-27 13:41:48.907 | INFO     | orchestrator.core:__init__:122 | 1:140078125038464 | OrchestrationEngine initialized
+2025-06-27 13:41:48.907 | INFO     | __main__:initialize_system:97 | 1:140078125038464 | System initialization completed successfully
+2025-06-27 13:41:48.908 | INFO     | __main__:run_test_session:107 | 1:140078125038464 | Starting test session
+2025-06-27 13:41:48.908 | INFO     | orchestrator.core:execute_session:134 | 1:140078125038464 | Starting exploration session
+2025-06-27 13:41:48.908 | DEBUG    | orchestrator.core:_create_context:182 | 1:140078125038464 | Creating session context
+2025-06-27 13:41:48.908 | DEBUG    | orchestrator.core:_create_context:196 | 1:140078125038464 | Session context created successfully
+2025-06-27 13:41:48.909 | DEBUG    | orchestrator.core:execute_session:145 | 1:140078125038464 | Session context created
+2025-06-27 13:41:48.909 | INFO     | orchestrator.core:execute_session:155 | 1:140078125038464 | Session initialized successfully
+2025-06-27 13:41:48.910 | INFO     | __main__:run_test_session:122 | 1:140078125038464 | Test session completed successfully
+2025-06-27 13:41:48.913 | INFO     | __main__:cleanup_system:142 | 1:140078125038464 | Starting system cleanup
+2025-06-27 13:41:48.914 | INFO     | orchestrator.cache_manager:disconnect:106 | 1:140078125038464 | Disconnected from Redis
+2025-06-27 13:41:48.914 | DEBUG    | __main__:cleanup_system:150 | 1:140078125038464 | Cache manager disconnected
+2025-06-27 13:41:48.915 | INFO     | __main__:cleanup_system:155 | 1:140078125038464 | Log statistics
+2025-06-27 13:41:48.915 | INFO     | __main__:cleanup_system:160 | 1:140078125038464 | System cleanup completed
+2025-06-27 13:49:18.624 | INFO     | orchestrator.logging_config:__init__:33 | 12:139674649934720 | LoggingManager initialized
+2025-06-27 13:49:18.624 | INFO     | orchestrator.logging_config:setup_logging:363 | 12:139674649934720 | Logging system configured successfully
+2025-06-27 13:49:18.625 | INFO     | __main__:test_logging:36 | 12:139674649934720 | Test du système de logging depuis script
+2025-06-27 13:49:18.633 | INFO     | __main__:test_logging:43 | 12:139674649934720 | Test de log spécifique à un agent
+2025-06-27 13:49:18.643 | INFO     | orchestrator.cache_manager:__init__:37 | 12:139674649934720 | CacheManager initialized
+2025-06-27 13:49:18.643 | DEBUG    | orchestrator.cache_manager:connect:76 | 12:139674649934720 | Attempting Redis connection
+2025-06-27 13:49:18.674 | INFO     | orchestrator.cache_manager:connect:86 | 12:139674649934720 | Connected to Redis successfully
+2025-06-27 13:49:46.495 | INFO     | orchestrator.logging_config:__init__:33 | 21:140118038469504 | LoggingManager initialized
+2025-06-27 13:49:46.495 | INFO     | orchestrator.logging_config:setup_logging:363 | 21:140118038469504 | Logging system configured successfully
+2025-06-27 13:49:46.496 | INFO     | __main__:test_logging:36 | 21:140118038469504 | Test du système de logging depuis script
+2025-06-27 13:49:46.504 | INFO     | __main__:test_logging:43 | 21:140118038469504 | Test de log spécifique à un agent
+2025-06-27 13:49:46.514 | INFO     | orchestrator.cache_manager:__init__:37 | 21:140118038469504 | CacheManager initialized
+2025-06-27 13:49:46.514 | DEBUG    | orchestrator.cache_manager:connect:76 | 21:140118038469504 | Attempting Redis connection
+2025-06-27 13:49:46.535 | INFO     | orchestrator.cache_manager:connect:86 | 21:140118038469504 | Connected to Redis successfully
+2025-06-27 13:49:46.537 | DEBUG    | orchestrator.cache_manager:set:255 | 21:140118038469504 | Cache set for key: script_test_key (TTL: 300s)
+2025-06-27 13:49:46.537 | DEBUG    | orchestrator.cache_manager:get:180 | 21:140118038469504 | Cache get operation started
+2025-06-27 13:49:46.539 | DEBUG    | orchestrator.cache_manager:get:207 | 21:140118038469504 | Cache hit
+2025-06-27 13:49:46.548 | INFO     | agents.base:__init__:62 | 21:140118038469504 | Agent initialized
+2025-06-27 13:49:46.549 | DEBUG    | agents.agent_normalization:execute:35 | 21:140118038469504 | Starting normalization execution
+2025-06-27 13:49:46.550 | INFO     | agents.base:pre_execute:82 | 21:140118038469504 | Starting agent execution
+2025-06-27 13:49:46.551 | DEBUG    | agents.agent_normalization:execute:45 | 21:140118038469504 | Checking cache for normalization result
+2025-06-27 13:49:46.552 | DEBUG    | orchestrator.cache_manager:get:180 | 21:140118038469504 | Cache get operation started
+2025-06-27 13:49:46.553 | DEBUG    | orchestrator.cache_manager:get:192 | 21:140118038469504 | Cache miss
+2025-06-27 13:49:46.553 | DEBUG    | agents.agent_normalization:execute:60 | 21:140118038469504 | Validating input data
+2025-06-27 13:49:46.554 | DEBUG    | agents.agent_normalization:execute:70 | 21:140118038469504 | Starting name normalization (fake mode)
+2025-06-27 13:49:46.555 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 21:140118038469504 | Starting fake name normalization
+2025-06-27 13:49:46.556 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 21:140118038469504 | Basic cleaning completed
+2025-06-27 13:49:46.557 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 21:140118038469504 | Legal forms removed
+2025-06-27 13:49:46.558 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 21:140118038469504 | Name normalization completed
+2025-06-27 13:49:46.559 | DEBUG    | agents.agent_normalization:execute:78 | 21:140118038469504 | Name normalization completed
+2025-06-27 13:49:46.560 | DEBUG    | agents.agent_normalization:execute:87 | 21:140118038469504 | Starting enterprise matching (fake mode)
+2025-06-27 13:49:46.561 | DEBUG    | agents.agent_normalization:execute:95 | 21:140118038469504 | Enterprise matching completed
+2025-06-27 13:49:46.562 | DEBUG    | agents.agent_normalization:execute:104 | 21:140118038469504 | Starting named entity extraction (fake mode)
+2025-06-27 13:49:46.563 | DEBUG    | agents.agent_normalization:execute:112 | 21:140118038469504 | Named entity extraction completed
+2025-06-27 13:49:46.564 | DEBUG    | agents.agent_normalization:execute:132 | 21:140118038469504 | Validating consolidated data
+2025-06-27 13:49:46.565 | WARNING  | agents.agent_normalization:execute:141 | 21:140118038469504 | Data validation errors found
+2025-06-27 13:49:46.566 | INFO     | agents.agent_normalization:execute:149 | 21:140118038469504 | Normalization execution successful
+2025-06-27 13:49:46.567 | DEBUG    | agents.agent_normalization:execute:177 | 21:140118038469504 | Caching normalization result
+2025-06-27 13:49:46.569 | DEBUG    | orchestrator.cache_manager:set:255 | 21:140118038469504 | Cache set for key: agent:normalization:Test Company SARL:5568349665894782007 (TTL: 3600s)
+2025-06-27 13:49:46.569 | INFO     | agents.base:post_execute:101 | 21:140118038469504 | Agent execution completed
+2025-06-27 13:49:46.570 | WARNING  | agents.base:post_execute:114 | 21:140118038469504 | Agent execution had errors
+2025-06-27 13:49:46.578 | INFO     | agents.base:__init__:62 | 21:140118038469504 | Agent initialized
+2025-06-27 13:49:46.579 | DEBUG    | agents.agent_identification:execute:32 | 21:140118038469504 | Starting identification execution
+2025-06-27 13:49:46.580 | INFO     | agents.base:pre_execute:82 | 21:140118038469504 | Starting agent execution
+2025-06-27 13:49:46.582 | DEBUG    | agents.agent_identification:execute:42 | 21:140118038469504 | Retrieving normalization data
+2025-06-27 13:49:46.583 | DEBUG    | agents.agent_identification:execute:55 | 21:140118038469504 | Checking for existing SIREN
+2025-06-27 13:49:46.584 | DEBUG    | agents.agent_identification:execute:67 | 21:140118038469504 | Using SIREN from normalization
+2025-06-27 13:49:46.586 | DEBUG    | agents.agent_identification:execute:95 | 21:140118038469504 | Starting website URL search (fake mode)
+2025-06-27 13:49:46.586 | DEBUG    | agents.agent_identification:execute:104 | 21:140118038469504 | Website URL search completed
+2025-06-27 13:49:46.588 | INFO     | agents.agent_identification:execute:126 | 21:140118038469504 | Identification execution successful
+2025-06-27 13:49:46.589 | INFO     | agents.base:post_execute:101 | 21:140118038469504 | Agent execution completed
+2025-06-27 13:49:46.597 | INFO     | agents.base:__init__:62 | 21:140118038469504 | Agent initialized
+2025-06-27 13:49:46.598 | DEBUG    | agents.agent_validation:execute:30 | 21:140118038469504 | Starting validation execution
+2025-06-27 13:49:46.600 | INFO     | agents.base:pre_execute:82 | 21:140118038469504 | Starting agent execution
+2025-06-27 13:49:46.601 | DEBUG    | agents.agent_validation:execute:40 | 21:140118038469504 | Validating input data
+2025-06-27 13:49:46.602 | DEBUG    | agents.agent_validation:execute:50 | 21:140118038469504 | Starting conflict detection (fake mode)
+2025-06-27 13:49:46.603 | DEBUG    | agents.agent_validation:execute:58 | 21:140118038469504 | Conflict detection completed
+2025-06-27 13:49:46.604 | DEBUG    | agents.agent_validation:execute:66 | 21:140118038469504 | Starting conflict resolution (fake mode)
+2025-06-27 13:49:46.605 | DEBUG    | agents.agent_validation:execute:74 | 21:140118038469504 | Conflict resolution completed
+2025-06-27 13:49:46.606 | DEBUG    | agents.agent_validation:execute:82 | 21:140118038469504 | Calculating consistency score
+2025-06-27 13:49:46.606 | DEBUG    | agents.agent_validation:execute:94 | 21:140118038469504 | Consistency score calculated
+2025-06-27 13:49:46.607 | DEBUG    | agents.agent_validation:execute:101 | 21:140118038469504 | Identifying linked entities (fake mode)
+2025-06-27 13:49:46.609 | DEBUG    | agents.agent_validation:execute:108 | 21:140118038469504 | Linked entities identification completed
+2025-06-27 13:49:46.609 | DEBUG    | agents.agent_validation:execute:118 | 21:140118038469504 | Data quality score calculated
+2025-06-27 13:49:46.610 | INFO     | agents.agent_validation:execute:137 | 21:140118038469504 | Validation execution successful
+2025-06-27 13:49:46.611 | INFO     | agents.base:post_execute:101 | 21:140118038469504 | Agent execution completed
+2025-06-27 13:49:46.614 | INFO     | orchestrator.core:__init__:122 | 21:140118038469504 | OrchestrationEngine initialized
+2025-06-27 13:49:46.614 | INFO     | orchestrator.core:execute_session:134 | 21:140118038469504 | Starting exploration session
+2025-06-27 13:49:46.615 | DEBUG    | orchestrator.core:_create_context:182 | 21:140118038469504 | Creating session context
+2025-06-27 13:49:46.615 | DEBUG    | orchestrator.core:_create_context:196 | 21:140118038469504 | Session context created successfully
+2025-06-27 13:49:46.615 | DEBUG    | orchestrator.core:execute_session:145 | 21:140118038469504 | Session context created
+2025-06-27 13:49:46.616 | INFO     | orchestrator.core:execute_session:155 | 21:140118038469504 | Session initialized successfully
+2025-06-27 13:49:46.619 | INFO     | orchestrator.cache_manager:disconnect:106 | 21:140118038469504 | Disconnected from Redis
+2025-06-27 14:23:52.203 | INFO     | orchestrator.logging_config:__init__:33 | 230:139672804264832 | LoggingManager initialized
+2025-06-27 14:23:52.204 | INFO     | orchestrator.cache_manager:__init__:37 | 230:139672804264832 | CacheManager initialized
+2025-06-27 14:23:52.204 | DEBUG    | orchestrator.cache_manager:connect:76 | 230:139672804264832 | Attempting Redis connection
+2025-06-27 14:23:52.207 | INFO     | orchestrator.cache_manager:connect:86 | 230:139672804264832 | Connected to Redis successfully
+2025-06-27 14:23:52.259 | INFO     | orchestrator.logging_config:__init__:33 | 230:139672804264832 | LoggingManager initialized
+2025-06-27 14:23:52.269 | INFO     | orchestrator.cache_manager:__init__:37 | 230:139672804264832 | CacheManager initialized
+2025-06-27 14:23:52.269 | DEBUG    | orchestrator.cache_manager:connect:76 | 230:139672804264832 | Attempting Redis connection
+2025-06-27 14:23:52.272 | INFO     | orchestrator.cache_manager:connect:86 | 230:139672804264832 | Connected to Redis successfully
+2025-06-27 14:23:52.300 | INFO     | orchestrator.logging_config:__init__:33 | 230:139672804264832 | LoggingManager initialized
+2025-06-27 14:43:52.748 | INFO     | orchestrator.logging_config:__init__:33 | 1:139997782743936 | LoggingManager initialized
+2025-06-27 14:43:52.749 | INFO     | orchestrator.logging_config:setup_logging:372 | 1:139997782743936 | Logging system configured successfully
+2025-06-27 14:43:52.749 | INFO     | __main__:initialize_system:63 | 1:139997782743936 | System initialization started
+2025-06-27 14:43:52.756 | INFO     | orchestrator.cache_manager:__init__:37 | 1:139997782743936 | CacheManager initialized
+2025-06-27 14:43:52.756 | DEBUG    | orchestrator.cache_manager:connect:76 | 1:139997782743936 | Attempting Redis connection
+2025-06-27 14:43:52.780 | INFO     | orchestrator.cache_manager:connect:86 | 1:139997782743936 | Connected to Redis successfully
+2025-06-27 14:43:52.781 | INFO     | __main__:initialize_system:76 | 1:139997782743936 | Cache manager initialized successfully
+2025-06-27 14:43:52.781 | INFO     | orchestrator.core:__init__:122 | 1:139997782743936 | OrchestrationEngine initialized
+2025-06-27 14:43:52.781 | INFO     | __main__:initialize_system:97 | 1:139997782743936 | System initialization completed successfully
+2025-06-27 14:43:52.782 | INFO     | __main__:run_test_session:107 | 1:139997782743936 | Starting test session
+2025-06-27 14:43:52.782 | INFO     | orchestrator.core:execute_session:134 | 1:139997782743936 | Starting exploration session
+2025-06-27 14:43:52.783 | DEBUG    | orchestrator.core:_create_context:182 | 1:139997782743936 | Creating session context
+2025-06-27 14:43:52.784 | DEBUG    | orchestrator.core:_create_context:196 | 1:139997782743936 | Session context created successfully
+2025-06-27 14:43:52.784 | DEBUG    | orchestrator.core:execute_session:145 | 1:139997782743936 | Session context created
+2025-06-27 14:43:52.784 | INFO     | orchestrator.core:execute_session:155 | 1:139997782743936 | Session initialized successfully
+2025-06-27 14:43:52.785 | INFO     | __main__:run_test_session:122 | 1:139997782743936 | Test session completed successfully
+2025-06-27 14:43:52.788 | INFO     | __main__:cleanup_system:142 | 1:139997782743936 | Starting system cleanup
+2025-06-27 14:43:52.789 | INFO     | orchestrator.cache_manager:disconnect:106 | 1:139997782743936 | Disconnected from Redis
+2025-06-27 14:43:52.790 | DEBUG    | __main__:cleanup_system:150 | 1:139997782743936 | Cache manager disconnected
+2025-06-27 14:43:52.791 | INFO     | __main__:cleanup_system:155 | 1:139997782743936 | Log statistics
+2025-06-27 14:43:52.791 | INFO     | __main__:cleanup_system:160 | 1:139997782743936 | System cleanup completed
+2025-06-27 15:22:27.361 | INFO     | orchestrator.logging_config:__init__:33 | 467:140329730673536 | LoggingManager initialized
+2025-06-27 15:22:27.361 | INFO     | orchestrator.cache_manager:__init__:37 | 467:140329730673536 | CacheManager initialized
+2025-06-27 15:22:27.361 | DEBUG    | orchestrator.cache_manager:connect:76 | 467:140329730673536 | Attempting Redis connection
+2025-06-27 15:22:27.384 | INFO     | orchestrator.cache_manager:connect:86 | 467:140329730673536 | Connected to Redis successfully
+2025-06-27 15:22:27.394 | INFO     | agents.base:__init__:62 | 467:140329730673536 | Agent initialized
+2025-06-27 15:22:27.395 | DEBUG    | agents.agent_normalization:execute:35 | 467:140329730673536 | Starting normalization execution
+2025-06-27 15:22:27.395 | INFO     | agents.base:pre_execute:82 | 467:140329730673536 | Starting agent execution
+2025-06-27 15:22:27.396 | DEBUG    | agents.agent_normalization:execute:45 | 467:140329730673536 | Checking cache for normalization result
+2025-06-27 15:22:27.396 | DEBUG    | orchestrator.cache_manager:get:180 | 467:140329730673536 | Cache get operation started
+2025-06-27 15:22:27.397 | DEBUG    | orchestrator.cache_manager:get:192 | 467:140329730673536 | Cache miss
+2025-06-27 15:22:27.397 | DEBUG    | agents.agent_normalization:execute:60 | 467:140329730673536 | Validating input data
+2025-06-27 15:22:27.397 | DEBUG    | agents.agent_normalization:execute:70 | 467:140329730673536 | Starting name normalization (fake mode)
+2025-06-27 15:22:27.398 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 467:140329730673536 | Starting fake name normalization
+2025-06-27 15:22:27.398 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 467:140329730673536 | Basic cleaning completed
+2025-06-27 15:22:27.399 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 467:140329730673536 | Legal forms removed
+2025-06-27 15:22:27.399 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 467:140329730673536 | Name normalization completed
+2025-06-27 15:22:27.400 | DEBUG    | agents.agent_normalization:execute:78 | 467:140329730673536 | Name normalization completed
+2025-06-27 15:22:27.400 | DEBUG    | agents.agent_normalization:execute:87 | 467:140329730673536 | Starting enterprise matching (fake mode)
+2025-06-27 15:22:27.401 | DEBUG    | agents.agent_normalization:execute:95 | 467:140329730673536 | Enterprise matching completed
+2025-06-27 15:22:27.401 | DEBUG    | agents.agent_normalization:execute:104 | 467:140329730673536 | Starting named entity extraction (fake mode)
+2025-06-27 15:22:27.402 | DEBUG    | agents.agent_normalization:execute:112 | 467:140329730673536 | Named entity extraction completed
+2025-06-27 15:22:27.402 | DEBUG    | agents.agent_normalization:execute:132 | 467:140329730673536 | Validating consolidated data
+2025-06-27 15:22:27.403 | WARNING  | agents.agent_normalization:execute:141 | 467:140329730673536 | Data validation errors found
+2025-06-27 15:22:27.404 | INFO     | agents.agent_normalization:execute:149 | 467:140329730673536 | Normalization execution successful
+2025-06-27 15:22:27.404 | DEBUG    | agents.agent_normalization:execute:177 | 467:140329730673536 | Caching normalization result
+2025-06-27 15:22:27.407 | DEBUG    | orchestrator.cache_manager:set:255 | 467:140329730673536 | Cache set for key: agent:normalization:Société Test SARL:1456484896930333326 (TTL: 3600s)
+2025-06-27 15:22:27.407 | INFO     | agents.base:post_execute:101 | 467:140329730673536 | Agent execution completed
+2025-06-27 15:22:27.407 | WARNING  | agents.base:post_execute:114 | 467:140329730673536 | Agent execution had errors
+2025-06-27 15:22:27.408 | DEBUG    | orchestrator.cache_manager:get:180 | 467:140329730673536 | Cache get operation started
+2025-06-27 15:22:27.409 | DEBUG    | orchestrator.cache_manager:get:207 | 467:140329730673536 | Cache hit
+2025-06-27 15:22:27.409 | INFO     | orchestrator.cache_manager:disconnect:106 | 467:140329730673536 | Disconnected from Redis
+2025-06-27 15:22:27.416 | INFO     | orchestrator.cache_manager:__init__:37 | 467:140329730673536 | CacheManager initialized
+2025-06-27 15:22:27.416 | DEBUG    | orchestrator.cache_manager:connect:76 | 467:140329730673536 | Attempting Redis connection
+2025-06-27 15:22:27.419 | INFO     | orchestrator.cache_manager:connect:86 | 467:140329730673536 | Connected to Redis successfully
+2025-06-27 15:22:27.427 | INFO     | agents.base:__init__:62 | 467:140329730673536 | Agent initialized
+2025-06-27 15:22:27.428 | DEBUG    | agents.agent_identification:execute:32 | 467:140329730673536 | Starting identification execution
+2025-06-27 15:22:27.428 | INFO     | agents.base:pre_execute:82 | 467:140329730673536 | Starting agent execution
+2025-06-27 15:22:27.429 | DEBUG    | agents.agent_identification:execute:42 | 467:140329730673536 | Retrieving normalization data
+2025-06-27 15:22:27.429 | DEBUG    | agents.agent_identification:execute:55 | 467:140329730673536 | Checking for existing SIREN
+2025-06-27 15:22:27.429 | DEBUG    | agents.agent_identification:execute:67 | 467:140329730673536 | Using SIREN from normalization
+2025-06-27 15:22:27.430 | DEBUG    | agents.agent_identification:execute:95 | 467:140329730673536 | Starting website URL search (fake mode)
+2025-06-27 15:22:27.430 | DEBUG    | agents.agent_identification:execute:104 | 467:140329730673536 | Website URL search completed
+2025-06-27 15:22:27.430 | ERROR    | agents.agent_identification:execute:158 | 467:140329730673536 | Identification execution failed
+2025-06-27 15:23:24.408 | INFO     | orchestrator.logging_config:__init__:33 | 482:140150645263232 | LoggingManager initialized
+2025-06-27 15:23:24.409 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.409 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.431 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.442 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.443 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.443 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.444 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.444 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.445 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.445 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.446 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.446 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.446 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.447 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 482:140150645263232 | Legal forms removed
+2025-06-27 15:23:24.447 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.448 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.448 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.448 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.448 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.449 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.449 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.449 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.450 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.450 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.452 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Société Test SARL:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.453 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.453 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.454 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.455 | DEBUG    | orchestrator.cache_manager:get:207 | 482:140150645263232 | Cache hit
+2025-06-27 15:23:24.455 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.464 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.465 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.468 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.476 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.477 | DEBUG    | agents.agent_identification:execute:32 | 482:140150645263232 | Starting identification execution
+2025-06-27 15:23:24.477 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.478 | DEBUG    | agents.agent_identification:execute:42 | 482:140150645263232 | Retrieving normalization data
+2025-06-27 15:23:24.478 | DEBUG    | agents.agent_identification:execute:55 | 482:140150645263232 | Checking for existing SIREN
+2025-06-27 15:23:24.479 | DEBUG    | agents.agent_identification:execute:67 | 482:140150645263232 | Using SIREN from normalization
+2025-06-27 15:23:24.479 | DEBUG    | agents.agent_identification:execute:95 | 482:140150645263232 | Starting website URL search (fake mode)
+2025-06-27 15:23:24.480 | DEBUG    | agents.agent_identification:execute:104 | 482:140150645263232 | Website URL search completed
+2025-06-27 15:23:24.480 | INFO     | agents.agent_identification:execute:126 | 482:140150645263232 | Identification execution successful
+2025-06-27 15:23:24.480 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.488 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.488 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.491 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.492 | DEBUG    | agents.agent_identification:execute:32 | 482:140150645263232 | Starting identification execution
+2025-06-27 15:23:24.492 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.493 | DEBUG    | agents.agent_identification:execute:42 | 482:140150645263232 | Retrieving normalization data
+2025-06-27 15:23:24.494 | ERROR    | agents.agent_identification:execute:158 | 482:140150645263232 | Identification execution failed
+2025-06-27 15:23:24.495 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.496 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.503 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.504 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.508 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.516 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.517 | DEBUG    | agents.agent_validation:execute:30 | 482:140150645263232 | Starting validation execution
+2025-06-27 15:23:24.517 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.518 | DEBUG    | agents.agent_validation:execute:40 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.518 | DEBUG    | agents.agent_validation:execute:50 | 482:140150645263232 | Starting conflict detection (fake mode)
+2025-06-27 15:23:24.519 | DEBUG    | agents.agent_validation:execute:58 | 482:140150645263232 | Conflict detection completed
+2025-06-27 15:23:24.519 | DEBUG    | agents.agent_validation:execute:66 | 482:140150645263232 | Starting conflict resolution (fake mode)
+2025-06-27 15:23:24.520 | DEBUG    | agents.agent_validation:execute:74 | 482:140150645263232 | Conflict resolution completed
+2025-06-27 15:23:24.520 | DEBUG    | agents.agent_validation:execute:82 | 482:140150645263232 | Calculating consistency score
+2025-06-27 15:23:24.520 | DEBUG    | agents.agent_validation:execute:94 | 482:140150645263232 | Consistency score calculated
+2025-06-27 15:23:24.521 | DEBUG    | agents.agent_validation:execute:101 | 482:140150645263232 | Identifying linked entities (fake mode)
+2025-06-27 15:23:24.521 | DEBUG    | agents.agent_validation:execute:108 | 482:140150645263232 | Linked entities identification completed
+2025-06-27 15:23:24.522 | DEBUG    | agents.agent_validation:execute:118 | 482:140150645263232 | Data quality score calculated
+2025-06-27 15:23:24.522 | INFO     | agents.agent_validation:execute:137 | 482:140150645263232 | Validation execution successful
+2025-06-27 15:23:24.523 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.530 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.530 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.534 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.534 | DEBUG    | agents.agent_validation:execute:30 | 482:140150645263232 | Starting validation execution
+2025-06-27 15:23:24.534 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.535 | DEBUG    | agents.agent_validation:execute:40 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.536 | DEBUG    | agents.agent_validation:execute:50 | 482:140150645263232 | Starting conflict detection (fake mode)
+2025-06-27 15:23:24.536 | DEBUG    | agents.agent_validation:execute:58 | 482:140150645263232 | Conflict detection completed
+2025-06-27 15:23:24.536 | DEBUG    | agents.agent_validation:execute:66 | 482:140150645263232 | Starting conflict resolution (fake mode)
+2025-06-27 15:23:24.537 | DEBUG    | agents.agent_validation:execute:74 | 482:140150645263232 | Conflict resolution completed
+2025-06-27 15:23:24.537 | DEBUG    | agents.agent_validation:execute:82 | 482:140150645263232 | Calculating consistency score
+2025-06-27 15:23:24.538 | DEBUG    | agents.agent_validation:execute:94 | 482:140150645263232 | Consistency score calculated
+2025-06-27 15:23:24.538 | DEBUG    | agents.agent_validation:execute:101 | 482:140150645263232 | Identifying linked entities (fake mode)
+2025-06-27 15:23:24.539 | DEBUG    | agents.agent_validation:execute:108 | 482:140150645263232 | Linked entities identification completed
+2025-06-27 15:23:24.539 | DEBUG    | agents.agent_validation:execute:118 | 482:140150645263232 | Data quality score calculated
+2025-06-27 15:23:24.539 | INFO     | agents.agent_validation:execute:137 | 482:140150645263232 | Validation execution successful
+2025-06-27 15:23:24.540 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.541 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.542 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.550 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.550 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.554 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.556 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.556 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.557 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.557 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.558 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.558 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.559 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.559 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.560 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.561 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.561 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.562 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.562 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 482:140150645263232 | Legal forms removed
+2025-06-27 15:23:24.563 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.563 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.564 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.564 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.565 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.565 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.566 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.566 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.567 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.568 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.570 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Apple Inc:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.570 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.571 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.571 | DEBUG    | agents.agent_identification:execute:32 | 482:140150645263232 | Starting identification execution
+2025-06-27 15:23:24.572 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.572 | DEBUG    | agents.agent_identification:execute:42 | 482:140150645263232 | Retrieving normalization data
+2025-06-27 15:23:24.573 | DEBUG    | agents.agent_identification:execute:55 | 482:140150645263232 | Checking for existing SIREN
+2025-06-27 15:23:24.573 | DEBUG    | agents.agent_identification:execute:67 | 482:140150645263232 | Using SIREN from normalization
+2025-06-27 15:23:24.574 | DEBUG    | agents.agent_identification:execute:95 | 482:140150645263232 | Starting website URL search (fake mode)
+2025-06-27 15:23:24.574 | DEBUG    | agents.agent_identification:execute:104 | 482:140150645263232 | Website URL search completed
+2025-06-27 15:23:24.575 | INFO     | agents.agent_identification:execute:126 | 482:140150645263232 | Identification execution successful
+2025-06-27 15:23:24.576 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.577 | DEBUG    | agents.agent_validation:execute:30 | 482:140150645263232 | Starting validation execution
+2025-06-27 15:23:24.577 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.577 | DEBUG    | agents.agent_validation:execute:40 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.578 | DEBUG    | agents.agent_validation:execute:50 | 482:140150645263232 | Starting conflict detection (fake mode)
+2025-06-27 15:23:24.578 | DEBUG    | agents.agent_validation:execute:58 | 482:140150645263232 | Conflict detection completed
+2025-06-27 15:23:24.579 | DEBUG    | agents.agent_validation:execute:66 | 482:140150645263232 | Starting conflict resolution (fake mode)
+2025-06-27 15:23:24.579 | DEBUG    | agents.agent_validation:execute:74 | 482:140150645263232 | Conflict resolution completed
+2025-06-27 15:23:24.579 | DEBUG    | agents.agent_validation:execute:82 | 482:140150645263232 | Calculating consistency score
+2025-06-27 15:23:24.580 | DEBUG    | agents.agent_validation:execute:94 | 482:140150645263232 | Consistency score calculated
+2025-06-27 15:23:24.580 | DEBUG    | agents.agent_validation:execute:101 | 482:140150645263232 | Identifying linked entities (fake mode)
+2025-06-27 15:23:24.580 | DEBUG    | agents.agent_validation:execute:108 | 482:140150645263232 | Linked entities identification completed
+2025-06-27 15:23:24.581 | DEBUG    | agents.agent_validation:execute:118 | 482:140150645263232 | Data quality score calculated
+2025-06-27 15:23:24.581 | INFO     | agents.agent_validation:execute:137 | 482:140150645263232 | Validation execution successful
+2025-06-27 15:23:24.582 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.583 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.584 | INFO     | agents.base:__init__:62 | 482:140150645263232 | Agent initialized
+2025-06-27 15:23:24.593 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.594 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.597 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.597 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.597 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.598 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.598 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.599 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.599 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.599 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.600 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.600 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.600 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.600 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.601 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.601 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.601 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.601 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.602 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.602 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.602 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.603 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.604 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Google LLC:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.604 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.605 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.605 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.613 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.614 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.616 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.617 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.617 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.618 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.618 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.618 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.619 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.619 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.619 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.619 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.620 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 482:140150645263232 | Legal forms removed
+2025-06-27 15:23:24.620 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.620 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.621 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.621 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.621 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.622 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.622 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.622 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.622 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.623 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.624 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Amazon.com Inc:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.624 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.625 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.626 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.634 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.634 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.637 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.637 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.638 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.638 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.639 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.639 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.640 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.641 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.641 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.642 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.642 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 482:140150645263232 | Legal forms removed
+2025-06-27 15:23:24.643 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.643 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.643 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.644 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.644 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.645 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.645 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.645 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.646 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.646 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.648 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Meta Platforms Inc:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.648 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.649 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.650 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.660 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.660 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.664 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.664 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.664 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.664 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.665 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.665 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.666 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.666 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.666 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.666 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.667 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 482:140150645263232 | Legal forms removed
+2025-06-27 15:23:24.667 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.668 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.668 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.668 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.669 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.669 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.669 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.669 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.670 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.670 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.671 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Tesla Inc:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.672 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.672 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.673 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:23:24.681 | INFO     | orchestrator.cache_manager:__init__:37 | 482:140150645263232 | CacheManager initialized
+2025-06-27 15:23:24.681 | DEBUG    | orchestrator.cache_manager:connect:76 | 482:140150645263232 | Attempting Redis connection
+2025-06-27 15:23:24.684 | INFO     | orchestrator.cache_manager:connect:86 | 482:140150645263232 | Connected to Redis successfully
+2025-06-27 15:23:24.684 | DEBUG    | agents.agent_normalization:execute:35 | 482:140150645263232 | Starting normalization execution
+2025-06-27 15:23:24.685 | INFO     | agents.base:pre_execute:82 | 482:140150645263232 | Starting agent execution
+2025-06-27 15:23:24.685 | DEBUG    | agents.agent_normalization:execute:45 | 482:140150645263232 | Checking cache for normalization result
+2025-06-27 15:23:24.686 | DEBUG    | orchestrator.cache_manager:get:180 | 482:140150645263232 | Cache get operation started
+2025-06-27 15:23:24.686 | DEBUG    | orchestrator.cache_manager:get:192 | 482:140150645263232 | Cache miss
+2025-06-27 15:23:24.686 | DEBUG    | agents.agent_normalization:execute:60 | 482:140150645263232 | Validating input data
+2025-06-27 15:23:24.686 | DEBUG    | agents.agent_normalization:execute:70 | 482:140150645263232 | Starting name normalization (fake mode)
+2025-06-27 15:23:24.687 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 482:140150645263232 | Starting fake name normalization
+2025-06-27 15:23:24.687 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 482:140150645263232 | Basic cleaning completed
+2025-06-27 15:23:24.688 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 482:140150645263232 | Legal forms removed
+2025-06-27 15:23:24.688 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.688 | DEBUG    | agents.agent_normalization:execute:78 | 482:140150645263232 | Name normalization completed
+2025-06-27 15:23:24.688 | DEBUG    | agents.agent_normalization:execute:87 | 482:140150645263232 | Starting enterprise matching (fake mode)
+2025-06-27 15:23:24.689 | DEBUG    | agents.agent_normalization:execute:95 | 482:140150645263232 | Enterprise matching completed
+2025-06-27 15:23:24.689 | DEBUG    | agents.agent_normalization:execute:104 | 482:140150645263232 | Starting named entity extraction (fake mode)
+2025-06-27 15:23:24.689 | DEBUG    | agents.agent_normalization:execute:112 | 482:140150645263232 | Named entity extraction completed
+2025-06-27 15:23:24.689 | DEBUG    | agents.agent_normalization:execute:132 | 482:140150645263232 | Validating consolidated data
+2025-06-27 15:23:24.690 | WARNING  | agents.agent_normalization:execute:141 | 482:140150645263232 | Data validation errors found
+2025-06-27 15:23:24.690 | INFO     | agents.agent_normalization:execute:149 | 482:140150645263232 | Normalization execution successful
+2025-06-27 15:23:24.690 | DEBUG    | agents.agent_normalization:execute:177 | 482:140150645263232 | Caching normalization result
+2025-06-27 15:23:24.691 | DEBUG    | orchestrator.cache_manager:set:255 | 482:140150645263232 | Cache set for key: agent:normalization:Netflix Inc:2217351111038982458 (TTL: 3600s)
+2025-06-27 15:23:24.692 | INFO     | agents.base:post_execute:101 | 482:140150645263232 | Agent execution completed
+2025-06-27 15:23:24.692 | WARNING  | agents.base:post_execute:114 | 482:140150645263232 | Agent execution had errors
+2025-06-27 15:23:24.693 | INFO     | orchestrator.cache_manager:disconnect:106 | 482:140150645263232 | Disconnected from Redis
+2025-06-27 15:30:26.986 | INFO     | orchestrator.logging_config:__init__:33 | 569:139737995537280 | LoggingManager initialized
+2025-06-27 15:30:26.987 | INFO     | orchestrator.core:__init__:122 | 569:139737995537280 | OrchestrationEngine initialized
+2025-06-27 15:30:26.987 | INFO     | orchestrator.core:__init__:122 | 569:139737995537280 | OrchestrationEngine initialized
+2025-06-27 15:30:26.988 | INFO     | orchestrator.core:execute_session:139 | 569:139737995537280 | Starting exploration session
+2025-06-27 15:30:26.988 | DEBUG    | orchestrator.core:_create_context:187 | 569:139737995537280 | Creating session context
+2025-06-27 15:30:26.988 | DEBUG    | orchestrator.core:_create_context:201 | 569:139737995537280 | Session context created successfully
+2025-06-27 15:30:26.989 | DEBUG    | orchestrator.core:execute_session:150 | 569:139737995537280 | Session context created
+2025-06-27 15:30:26.989 | INFO     | orchestrator.core:execute_session:160 | 569:139737995537280 | Session initialized successfully
+2025-06-27 15:30:26.997 | INFO     | orchestrator.cache_manager:__init__:37 | 569:139737995537280 | CacheManager initialized
+2025-06-27 15:30:26.998 | DEBUG    | orchestrator.cache_manager:connect:76 | 569:139737995537280 | Attempting Redis connection
+2025-06-27 15:30:27.020 | INFO     | orchestrator.cache_manager:connect:86 | 569:139737995537280 | Connected to Redis successfully
+2025-06-27 15:30:27.021 | INFO     | orchestrator.cache_manager:disconnect:106 | 569:139737995537280 | Disconnected from Redis
+2025-06-27 15:30:27.022 | INFO     | orchestrator.core:__init__:122 | 569:139737995537280 | OrchestrationEngine initialized
+2025-06-27 15:30:27.022 | INFO     | orchestrator.core:execute_session:139 | 569:139737995537280 | Starting exploration session
+2025-06-27 15:30:27.023 | DEBUG    | orchestrator.core:_create_context:187 | 569:139737995537280 | Creating session context
+2025-06-27 15:30:27.023 | DEBUG    | orchestrator.core:_create_context:201 | 569:139737995537280 | Session context created successfully
+2025-06-27 15:30:27.023 | DEBUG    | orchestrator.core:execute_session:150 | 569:139737995537280 | Session context created
+2025-06-27 15:30:27.023 | INFO     | orchestrator.core:execute_session:160 | 569:139737995537280 | Session initialized successfully
+2025-06-27 15:30:27.024 | INFO     | orchestrator.core:execute_session:139 | 569:139737995537280 | Starting exploration session
+2025-06-27 15:30:27.024 | DEBUG    | orchestrator.core:_create_context:187 | 569:139737995537280 | Creating session context
+2025-06-27 15:30:27.024 | DEBUG    | orchestrator.core:_create_context:201 | 569:139737995537280 | Session context created successfully
+2025-06-27 15:30:27.025 | DEBUG    | orchestrator.core:execute_session:150 | 569:139737995537280 | Session context created
+2025-06-27 15:30:27.025 | INFO     | orchestrator.core:execute_session:160 | 569:139737995537280 | Session initialized successfully
+2025-06-27 15:30:27.025 | INFO     | orchestrator.core:__init__:122 | 569:139737995537280 | OrchestrationEngine initialized
+2025-06-27 15:30:27.026 | INFO     | orchestrator.core:execute_session:139 | 569:139737995537280 | Starting exploration session
+2025-06-27 15:30:27.026 | DEBUG    | orchestrator.core:_create_context:187 | 569:139737995537280 | Creating session context
+2025-06-27 15:30:27.027 | DEBUG    | orchestrator.core:_create_context:201 | 569:139737995537280 | Session context created successfully
+2025-06-27 15:30:27.027 | DEBUG    | orchestrator.core:execute_session:150 | 569:139737995537280 | Session context created
+2025-06-27 15:30:27.027 | INFO     | orchestrator.core:execute_session:160 | 569:139737995537280 | Session initialized successfully
+2025-06-27 15:30:27.027 | INFO     | orchestrator.core:execute_session:139 | 569:139737995537280 | Starting exploration session
+2025-06-27 15:30:27.028 | DEBUG    | orchestrator.core:_create_context:187 | 569:139737995537280 | Creating session context
+2025-06-27 15:30:27.028 | DEBUG    | orchestrator.core:_create_context:201 | 569:139737995537280 | Session context created successfully
+2025-06-27 15:30:27.028 | DEBUG    | orchestrator.core:execute_session:150 | 569:139737995537280 | Session context created
+2025-06-27 15:30:27.028 | INFO     | orchestrator.core:execute_session:160 | 569:139737995537280 | Session initialized successfully
+2025-06-27 15:30:27.029 | INFO     | orchestrator.core:execute_session:139 | 569:139737995537280 | Starting exploration session
+2025-06-27 15:30:27.029 | DEBUG    | orchestrator.core:_create_context:187 | 569:139737995537280 | Creating session context
+2025-06-27 15:30:27.029 | DEBUG    | orchestrator.core:_create_context:201 | 569:139737995537280 | Session context created successfully
+2025-06-27 15:30:27.029 | DEBUG    | orchestrator.core:execute_session:150 | 569:139737995537280 | Session context created
+2025-06-27 15:30:27.030 | INFO     | orchestrator.core:execute_session:160 | 569:139737995537280 | Session initialized successfully
+2025-06-27 15:38:41.611 | INFO     | orchestrator.logging_config:__init__:33 | 664:139709264743296 | LoggingManager initialized
+2025-06-27 15:38:41.612 | INFO     | orchestrator.cache_manager:__init__:37 | 664:139709264743296 | CacheManager initialized
+2025-06-27 15:38:41.612 | DEBUG    | orchestrator.cache_manager:connect:76 | 664:139709264743296 | Attempting Redis connection
+2025-06-27 15:38:41.636 | INFO     | orchestrator.cache_manager:connect:86 | 664:139709264743296 | Connected to Redis successfully
+2025-06-27 15:38:41.653 | INFO     | orchestrator.logging_config:__init__:33 | 664:139709264743296 | LoggingManager initialized
+2025-06-27 15:38:41.653 | INFO     | orchestrator.logging_config:setup_logging:298 | 664:139709264743296 | Logging system reconfigured
+2025-06-27 15:38:41.661 | INFO     | agents.base:__init__:62 | 664:139709264743296 | Agent initialized
+2025-06-27 15:38:41.668 | INFO     | agents.base:__init__:62 | 664:139709264743296 | Agent initialized
+2025-06-27 15:38:41.676 | INFO     | agents.base:__init__:62 | 664:139709264743296 | Agent initialized
+2025-06-27 15:38:41.676 | DEBUG    | agents.agent_normalization:execute:35 | 664:139709264743296 | Starting normalization execution
+2025-06-27 15:38:41.677 | INFO     | agents.base:pre_execute:82 | 664:139709264743296 | Starting agent execution
+2025-06-27 15:38:41.678 | DEBUG    | agents.agent_normalization:execute:45 | 664:139709264743296 | Checking cache for normalization result
+2025-06-27 15:38:41.679 | DEBUG    | orchestrator.cache_manager:get:180 | 664:139709264743296 | Cache get operation started
+2025-06-27 15:38:41.679 | DEBUG    | orchestrator.cache_manager:get:192 | 664:139709264743296 | Cache miss
+2025-06-27 15:38:41.679 | DEBUG    | agents.agent_normalization:execute:60 | 664:139709264743296 | Validating input data
+2025-06-27 15:38:41.680 | DEBUG    | agents.agent_normalization:execute:70 | 664:139709264743296 | Starting name normalization (fake mode)
+2025-06-27 15:38:41.681 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 664:139709264743296 | Starting fake name normalization
+2025-06-27 15:38:41.682 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 664:139709264743296 | Basic cleaning completed
+2025-06-27 15:38:41.682 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 664:139709264743296 | Legal forms removed
+2025-06-27 15:38:41.683 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 664:139709264743296 | Name normalization completed
+2025-06-27 15:38:41.684 | DEBUG    | agents.agent_normalization:execute:78 | 664:139709264743296 | Name normalization completed
+2025-06-27 15:38:41.684 | DEBUG    | agents.agent_normalization:execute:87 | 664:139709264743296 | Starting enterprise matching (fake mode)
+2025-06-27 15:38:41.685 | DEBUG    | agents.agent_normalization:execute:95 | 664:139709264743296 | Enterprise matching completed
+2025-06-27 15:38:41.686 | DEBUG    | agents.agent_normalization:execute:104 | 664:139709264743296 | Starting named entity extraction (fake mode)
+2025-06-27 15:38:41.686 | DEBUG    | agents.agent_normalization:execute:112 | 664:139709264743296 | Named entity extraction completed
+2025-06-27 15:38:41.687 | DEBUG    | agents.agent_normalization:execute:132 | 664:139709264743296 | Validating consolidated data
+2025-06-27 15:38:41.688 | WARNING  | agents.agent_normalization:execute:141 | 664:139709264743296 | Data validation errors found
+2025-06-27 15:38:41.688 | INFO     | agents.agent_normalization:execute:149 | 664:139709264743296 | Normalization execution successful
+2025-06-27 15:38:41.689 | DEBUG    | agents.agent_normalization:execute:177 | 664:139709264743296 | Caching normalization result
+2025-06-27 15:38:41.691 | DEBUG    | orchestrator.cache_manager:set:255 | 664:139709264743296 | Cache set for key: agent:normalization:Apple Inc:9092030446885577272 (TTL: 3600s)
+2025-06-27 15:38:41.691 | INFO     | agents.base:post_execute:101 | 664:139709264743296 | Agent execution completed
+2025-06-27 15:38:41.692 | WARNING  | agents.base:post_execute:114 | 664:139709264743296 | Agent execution had errors
+2025-06-27 15:38:41.693 | DEBUG    | agents.agent_identification:execute:32 | 664:139709264743296 | Starting identification execution
+2025-06-27 15:38:41.694 | INFO     | agents.base:pre_execute:82 | 664:139709264743296 | Starting agent execution
+2025-06-27 15:38:41.694 | DEBUG    | agents.agent_identification:execute:42 | 664:139709264743296 | Retrieving normalization data
+2025-06-27 15:38:41.695 | DEBUG    | agents.agent_identification:execute:55 | 664:139709264743296 | Checking for existing SIREN
+2025-06-27 15:38:41.696 | DEBUG    | agents.agent_identification:execute:67 | 664:139709264743296 | Using SIREN from normalization
+2025-06-27 15:38:41.696 | DEBUG    | agents.agent_identification:execute:95 | 664:139709264743296 | Starting website URL search (fake mode)
+2025-06-27 15:38:41.697 | DEBUG    | agents.agent_identification:execute:104 | 664:139709264743296 | Website URL search completed
+2025-06-27 15:38:41.697 | INFO     | agents.agent_identification:execute:126 | 664:139709264743296 | Identification execution successful
+2025-06-27 15:38:41.698 | INFO     | agents.base:post_execute:101 | 664:139709264743296 | Agent execution completed
+2025-06-27 15:38:41.699 | DEBUG    | agents.agent_validation:execute:30 | 664:139709264743296 | Starting validation execution
+2025-06-27 15:38:41.700 | INFO     | agents.base:pre_execute:82 | 664:139709264743296 | Starting agent execution
+2025-06-27 15:38:41.700 | DEBUG    | agents.agent_validation:execute:40 | 664:139709264743296 | Validating input data
+2025-06-27 15:38:41.701 | DEBUG    | agents.agent_validation:execute:50 | 664:139709264743296 | Starting conflict detection (fake mode)
+2025-06-27 15:38:41.702 | DEBUG    | agents.agent_validation:execute:58 | 664:139709264743296 | Conflict detection completed
+2025-06-27 15:38:41.702 | DEBUG    | agents.agent_validation:execute:66 | 664:139709264743296 | Starting conflict resolution (fake mode)
+2025-06-27 15:38:41.703 | DEBUG    | agents.agent_validation:execute:74 | 664:139709264743296 | Conflict resolution completed
+2025-06-27 15:38:41.704 | DEBUG    | agents.agent_validation:execute:82 | 664:139709264743296 | Calculating consistency score
+2025-06-27 15:38:41.704 | DEBUG    | agents.agent_validation:execute:94 | 664:139709264743296 | Consistency score calculated
+2025-06-27 15:38:41.705 | DEBUG    | agents.agent_validation:execute:101 | 664:139709264743296 | Identifying linked entities (fake mode)
+2025-06-27 15:38:41.705 | DEBUG    | agents.agent_validation:execute:108 | 664:139709264743296 | Linked entities identification completed
+2025-06-27 15:38:41.706 | DEBUG    | agents.agent_validation:execute:118 | 664:139709264743296 | Data quality score calculated
+2025-06-27 15:38:41.707 | INFO     | agents.agent_validation:execute:137 | 664:139709264743296 | Validation execution successful
+2025-06-27 15:38:41.707 | INFO     | agents.base:post_execute:101 | 664:139709264743296 | Agent execution completed
+2025-06-27 15:38:41.709 | INFO     | orchestrator.cache_manager:disconnect:106 | 664:139709264743296 | Disconnected from Redis
+2025-06-27 15:42:28.588 | INFO     | orchestrator.logging_config:__init__:33 | 750:140153717373824 | LoggingManager initialized
+2025-06-27 15:42:28.588 | INFO     | orchestrator.cache_manager:__init__:37 | 750:140153717373824 | CacheManager initialized
+2025-06-27 15:42:28.589 | DEBUG    | orchestrator.cache_manager:connect:76 | 750:140153717373824 | Attempting Redis connection
+2025-06-27 15:42:28.611 | INFO     | orchestrator.cache_manager:connect:86 | 750:140153717373824 | Connected to Redis successfully
+2025-06-27 15:42:28.613 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_0 (TTL: 60s)
+2025-06-27 15:42:28.613 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.614 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.615 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_1 (TTL: 60s)
+2025-06-27 15:42:28.616 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.617 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.618 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_2 (TTL: 60s)
+2025-06-27 15:42:28.618 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.619 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.620 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_3 (TTL: 60s)
+2025-06-27 15:42:28.620 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.621 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.622 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_4 (TTL: 60s)
+2025-06-27 15:42:28.622 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.623 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.624 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_5 (TTL: 60s)
+2025-06-27 15:42:28.624 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.625 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.625 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_6 (TTL: 60s)
+2025-06-27 15:42:28.625 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.626 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.627 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_7 (TTL: 60s)
+2025-06-27 15:42:28.627 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.627 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.628 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_8 (TTL: 60s)
+2025-06-27 15:42:28.628 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.629 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.630 | DEBUG    | orchestrator.cache_manager:set:255 | 750:140153717373824 | Cache set for key: perf_test_9 (TTL: 60s)
+2025-06-27 15:42:28.630 | DEBUG    | orchestrator.cache_manager:get:180 | 750:140153717373824 | Cache get operation started
+2025-06-27 15:42:28.631 | DEBUG    | orchestrator.cache_manager:get:207 | 750:140153717373824 | Cache hit
+2025-06-27 15:42:28.632 | INFO     | orchestrator.cache_manager:invalidate_pattern:289 | 750:140153717373824 | Invalidated 10 keys matching pattern: *
+2025-06-27 15:42:28.633 | INFO     | orchestrator.cache_manager:disconnect:106 | 750:140153717373824 | Disconnected from Redis
+2025-06-27 15:42:37.840 | INFO     | orchestrator.logging_config:__init__:33 | 760:139818005228416 | LoggingManager initialized
+2025-06-27 15:42:37.841 | INFO     | orchestrator.cache_manager:__init__:37 | 760:139818005228416 | CacheManager initialized
+2025-06-27 15:42:37.841 | DEBUG    | orchestrator.cache_manager:connect:76 | 760:139818005228416 | Attempting Redis connection
+2025-06-27 15:42:37.865 | INFO     | orchestrator.cache_manager:connect:86 | 760:139818005228416 | Connected to Redis successfully
+2025-06-27 15:42:37.884 | INFO     | orchestrator.logging_config:__init__:33 | 760:139818005228416 | LoggingManager initialized
+2025-06-27 15:42:37.884 | INFO     | orchestrator.logging_config:setup_logging:298 | 760:139818005228416 | Logging system reconfigured
+2025-06-27 15:42:37.893 | INFO     | agents.base:__init__:62 | 760:139818005228416 | Agent initialized
+2025-06-27 15:42:37.901 | INFO     | agents.base:__init__:62 | 760:139818005228416 | Agent initialized
+2025-06-27 15:42:37.913 | INFO     | agents.base:__init__:62 | 760:139818005228416 | Agent initialized
+2025-06-27 15:42:37.916 | DEBUG    | agents.agent_normalization:execute:35 | 760:139818005228416 | Starting normalization execution
+2025-06-27 15:42:37.918 | INFO     | agents.base:pre_execute:82 | 760:139818005228416 | Starting agent execution
+2025-06-27 15:42:37.920 | DEBUG    | agents.agent_normalization:execute:45 | 760:139818005228416 | Checking cache for normalization result
+2025-06-27 15:42:37.923 | DEBUG    | orchestrator.cache_manager:get:180 | 760:139818005228416 | Cache get operation started
+2025-06-27 15:42:37.924 | DEBUG    | orchestrator.cache_manager:get:192 | 760:139818005228416 | Cache miss
+2025-06-27 15:42:37.924 | DEBUG    | agents.agent_normalization:execute:60 | 760:139818005228416 | Validating input data
+2025-06-27 15:42:37.927 | DEBUG    | agents.agent_normalization:execute:70 | 760:139818005228416 | Starting name normalization (fake mode)
+2025-06-27 15:42:37.929 | DEBUG    | agents.agent_normalization:_normalize_name_fake:214 | 760:139818005228416 | Starting fake name normalization
+2025-06-27 15:42:37.932 | DEBUG    | agents.agent_normalization:_normalize_name_fake:225 | 760:139818005228416 | Basic cleaning completed
+2025-06-27 15:42:37.933 | DEBUG    | agents.agent_normalization:_normalize_name_fake:241 | 760:139818005228416 | Legal forms removed
+2025-06-27 15:42:37.934 | DEBUG    | agents.agent_normalization:_normalize_name_fake:271 | 760:139818005228416 | Name normalization completed
+2025-06-27 15:42:37.934 | DEBUG    | agents.agent_normalization:execute:78 | 760:139818005228416 | Name normalization completed
+2025-06-27 15:42:37.935 | DEBUG    | agents.agent_normalization:execute:87 | 760:139818005228416 | Starting enterprise matching (fake mode)
+2025-06-27 15:42:37.936 | DEBUG    | agents.agent_normalization:execute:95 | 760:139818005228416 | Enterprise matching completed
+2025-06-27 15:42:37.937 | DEBUG    | agents.agent_normalization:execute:104 | 760:139818005228416 | Starting named entity extraction (fake mode)
+2025-06-27 15:42:37.938 | DEBUG    | agents.agent_normalization:execute:112 | 760:139818005228416 | Named entity extraction completed
+2025-06-27 15:42:37.939 | DEBUG    | agents.agent_normalization:execute:132 | 760:139818005228416 | Validating consolidated data
+2025-06-27 15:42:37.940 | WARNING  | agents.agent_normalization:execute:141 | 760:139818005228416 | Data validation errors found
+2025-06-27 15:42:37.941 | INFO     | agents.agent_normalization:execute:149 | 760:139818005228416 | Normalization execution successful
+2025-06-27 15:42:37.942 | DEBUG    | agents.agent_normalization:execute:177 | 760:139818005228416 | Caching normalization result
+2025-06-27 15:42:37.944 | DEBUG    | orchestrator.cache_manager:set:255 | 760:139818005228416 | Cache set for key: agent:normalization:Apple Inc:-8160694884195832059 (TTL: 3600s)
+2025-06-27 15:42:37.944 | INFO     | agents.base:post_execute:101 | 760:139818005228416 | Agent execution completed
+2025-06-27 15:42:37.945 | WARNING  | agents.base:post_execute:114 | 760:139818005228416 | Agent execution had errors
+2025-06-27 15:42:37.947 | DEBUG    | agents.agent_identification:execute:32 | 760:139818005228416 | Starting identification execution
+2025-06-27 15:42:37.948 | INFO     | agents.base:pre_execute:82 | 760:139818005228416 | Starting agent execution
+2025-06-27 15:42:37.950 | DEBUG    | agents.agent_identification:execute:42 | 760:139818005228416 | Retrieving normalization data
+2025-06-27 15:42:37.951 | DEBUG    | agents.agent_identification:execute:55 | 760:139818005228416 | Checking for existing SIREN
+2025-06-27 15:42:37.952 | DEBUG    | agents.agent_identification:execute:67 | 760:139818005228416 | Using SIREN from normalization
+2025-06-27 15:42:37.954 | DEBUG    | agents.agent_identification:execute:95 | 760:139818005228416 | Starting website URL search (fake mode)
+2025-06-27 15:42:37.955 | DEBUG    | agents.agent_identification:execute:104 | 760:139818005228416 | Website URL search completed
+2025-06-27 15:42:37.956 | INFO     | agents.agent_identification:execute:126 | 760:139818005228416 | Identification execution successful
+2025-06-27 15:42:37.958 | INFO     | agents.base:post_execute:101 | 760:139818005228416 | Agent execution completed
+2025-06-27 15:42:37.959 | DEBUG    | agents.agent_validation:execute:30 | 760:139818005228416 | Starting validation execution
+2025-06-27 15:42:37.960 | INFO     | agents.base:pre_execute:82 | 760:139818005228416 | Starting agent execution
+2025-06-27 15:42:37.961 | DEBUG    | agents.agent_validation:execute:40 | 760:139818005228416 | Validating input data
+2025-06-27 15:42:37.962 | DEBUG    | agents.agent_validation:execute:50 | 760:139818005228416 | Starting conflict detection (fake mode)
+2025-06-27 15:42:37.963 | DEBUG    | agents.agent_validation:execute:58 | 760:139818005228416 | Conflict detection completed
+2025-06-27 15:42:37.964 | DEBUG    | agents.agent_validation:execute:66 | 760:139818005228416 | Starting conflict resolution (fake mode)
+2025-06-27 15:42:37.965 | DEBUG    | agents.agent_validation:execute:74 | 760:139818005228416 | Conflict resolution completed
+2025-06-27 15:42:37.966 | DEBUG    | agents.agent_validation:execute:82 | 760:139818005228416 | Calculating consistency score
+2025-06-27 15:42:37.967 | DEBUG    | agents.agent_validation:execute:94 | 760:139818005228416 | Consistency score calculated
+2025-06-27 15:42:37.969 | DEBUG    | agents.agent_validation:execute:101 | 760:139818005228416 | Identifying linked entities (fake mode)
+2025-06-27 15:42:37.970 | DEBUG    | agents.agent_validation:execute:108 | 760:139818005228416 | Linked entities identification completed
+2025-06-27 15:42:37.971 | DEBUG    | agents.agent_validation:execute:118 | 760:139818005228416 | Data quality score calculated
+2025-06-27 15:42:37.972 | INFO     | agents.agent_validation:execute:137 | 760:139818005228416 | Validation execution successful
+2025-06-27 15:42:37.973 | INFO     | agents.base:post_execute:101 | 760:139818005228416 | Agent execution completed
+2025-06-27 15:42:37.975 | INFO     | orchestrator.cache_manager:disconnect:106 | 760:139818005228416 | Disconnected from Redis
